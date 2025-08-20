@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Inventaris Kampus - Sekolah Tinggi Teknologi Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="login-container">
+        <div class="login-card animate-slide-down">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="/assets/logo-stti.png" alt="Logo STTC" class="logo-img">
+                </div>
+                <h1>Sistem Inventaris</h1>
+                <p>Sekolah Tinggi Teknologi Indonesia</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" placeholder="Masukkan username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <img src="/assets/logo-stti.png" alt="Logo" class="sidebar-logo">
+                    <div>
+                        <h2>STTI Inventaris</h2>
+                        <p>Sistem Manajemen Aset</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active" data-page="dashboard">
+                        <span class="nav-icon">📊</span>
+                        Dashboard
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="assets">
+                        <span class="nav-icon">🖥️</span>
+                        Manajemen Aset
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="borrowing">
+                        <span class="nav-icon">📚</span>
+                        Peminjaman
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="maintenance">
+                        <span class="nav-icon">🛠️</span>
+                        Pemeliharaan
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="users">
+                        <span class="nav-icon">👤</span>
+                        Pengguna
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="requests">
+                        <span class="nav-icon">📝</span>
+                        Pengajuan Aset
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" data-page="reports">
+                        <span class="nav-icon">📈</span>
+                        Laporan
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" id="mainContent">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="navbar-left">
+                    <button class="menu-toggle" id="menuToggle">☰</button>
+                    <span class="navbar-brand" id="pageTitle">Dashboard</span>
+                </div>
+                <div class="navbar-nav">
+                    <div class="user-profile">
+                        <img src="/assets/admin.png" alt="Profile"
+                            class="profile-img" id="userAvatarImg">
+                        <span id="currentUser">Admin</span>
+                        <span id="userRole" class="user-role">Administrator</span>
+                    </div>
+                    <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Dashboard Content -->
+                <div id="dashboardContent" class="page-content">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-title">Total Aset</div>
+                                <div class="stat-icon primary">🖥️</div>
+                            </div>
+                            <div class="stat-value" id="totalAssets">150</div>
+                            <div class="stat-change positive">
+                                <span>↓</span>
+                                <span>+5% dari bulan lalu</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-title">Aset Dipinjam</div>
+                                <div class="stat-icon warning">📚</div>
+                            </div>
+                            <div class="stat-value" id="borrowedAssets">25</div>
+                            <div class="stat-change positive">
+                                <span>↓</span>
+                                <span>+12% dari bulan lalu</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-title">Aset Tersedia</div>
+                                <div class="stat-icon success">✓</div>
+                            </div>
+                            <div class="stat-value" id="availableAssets">115</div>
+                            <div class="stat-change positive">
+                                <span>↓</span>
+                                <span>+3% dari bulan lalu</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <div class="stat-title">Maintenance</div>
+                                <div class="stat-icon danger">🛠️</div>
+                            </div>
+                            <div class="stat-value" id="maintenanceAssets">10</div>
+                            <div class="stat-change negative">
+                                <span>↔</span>
+                                <span>-2% dari bulan lalu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Aset Terbaru</h3>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Aset</th>
+                                    <th>Nama Aset</th>
+                                    <th>Jenis</th>
+                                    <th>Lokasi</th>
+                                    <th>Status</th>
+                                    <th>Tanggal Masuk</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentAssetsTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Assets Content -->
+                <div id="assetsContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Manajemen Aset</h3>
+                            <div class="search-box">
+                                <span class="search-icon">🔍</span>
+                                <input type="text" class="search-input" id="assetSearch" placeholder="Cari aset...">
+                            </div>
+                            <button class="btn btn-primary" onclick="openAssetModal()">+ Tambah Aset</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Aset</th>
+                                    <th>Nama Aset</th>
+                                    <th>Jenis</th>
+                                    <th>Merek</th>
+                                    <th>Lokasi</th>
+                                    <th>Status</th>
+                                    <th>Kondisi</th>
+                                    <th>Harga</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assetsTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Borrowing Content -->
+                <div id="borrowingContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Manajemen Peminjaman</h3>
+                            <button class="btn btn-primary" onclick="openBorrowModal()">+ Pinjam Aset</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Peminjaman</th>
+                                    <th>Peminjam</th>
+                                    <th>Aset</th>
+                                    <th>Tanggal Pinjam</th>
+                                    <th>Tanggal Kembali</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="borrowingTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Maintenance Content -->
+                <div id="maintenanceContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Pemeliharaan Aset</h3>
+                            <button class="btn btn-primary" onclick="openMaintenanceModal()">+ Catat
+                                Pemeliharaan</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID Maintenance</th>
+                                    <th>Aset</th>
+                                    <th>Jenis Pemeliharaan</th>
+                                    <th>Tanggal</th>
+                                    <th>Biaya</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="maintenanceTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Users Content -->
+                <div id="usersContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Manajemen Pengguna</h3>
+                            <button class="btn btn-primary" onclick="openUserModal()">+ Tambah Pengguna</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Foto</th>
+                                    <th>Nama</th>
+                                    <th>Username</th>
+                                    <th>Level</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Requests Content -->
+                <div id="requestsContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Pengajuan Aset</h3>
+                            <button class="btn btn-primary" onclick="openRequestModal()">+ Ajukan Aset</button>
+                        </div>
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Pengaju</th>
+                                    <th>Aset Diminta</th>
+                                    <th>Jumlah</th>
+                                    <th>Tanggal Pengajuan</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="requestsTable">
+                                <!-- Data will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Reports Content -->
+                <div id="reportsContent" class="page-content" style="display: none;">
+                    <div class="data-table-container">
+                        <div class="table-header">
+                            <h3 class="table-title">Laporan Inventaris</h3>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" onclick="generateReport('assets')">🖥️ Laporan
+                                    Aset</button>
+                                <button class="btn btn-success" onclick="generateReport('borrowing')">📚 Laporan
+                                    Peminjaman</button>
+                                <button class="btn btn-warning" onclick="generateReport('maintenance')">🛠️ Laporan
+                                    Maintenance</button>
+                                <button class="btn btn-secondary" onclick="generateReport('financial')">💰 Laporan
+                                    Keuangan</button>
+                            </div>
+                        </div>
+                        <div class="report-preview" id="reportPreview">
+                            <p>Pilih jenis laporan untuk melihat preview data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Asset Modal -->
+    <div id="assetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Tambah Aset Baru</h3>
+                <button class="close-modal" onclick="closeModal('assetModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="assetForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="assetName">Nama Aset</label>
+                            <input type="text" id="assetName" class="form-control" required>
+                            <div class="error-message" id="assetNameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assetType">Jenis Aset</label>
+                            <select id="assetType" class="form-control" required>
+                                <option value="">Pilih Jenis</option>
+                                <option value="ELK">Elektronik</option>
+                                <option value="FUR">Furniture</option>
+                                <option value="KDR">Kendaraan</option>
+                                <option value="ATK">Alat Tulis</option>
+                                <option value="LAN">Lainnya</option>
+                            </select>
+                            <div class="error-message" id="assetTypeError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="assetBrand">Merek</label>
+                            <input type="text" id="assetBrand" class="form-control" required>
+                            <div class="error-message" id="assetBrandError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assetSerial">Nomor Seri</label>
+                            <input type="text" id="assetSerial" class="form-control" required>
+                            <div class="error-message" id="assetSerialError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="assetPrice">Harga Pembelian</label>
+                            <input type="number" id="assetPrice" class="form-control" required min="1000">
+                            <div class="error-message" id="assetPriceError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assetPurchaseDate">Tanggal Pembelian</label>
+                            <input type="date" id="assetPurchaseDate" class="form-control" required>
+                            <div class="error-message" id="assetPurchaseDateError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="assetLocation">Lokasi</label>
+                            <select id="assetLocation" class="form-control" required>
+                                <option value="">Pilih Lokasi</option>
+                                <option value="Ruang IT">Ruang IT</option>
+                                <option value="Aula">Aula</option>
+                                <option value="Ruang Dosen">Ruang Dosen</option>
+                                <option value="Laboratorium">Laboratorium</option>
+                                <option value="Perpustakaan">Perpustakaan</option>
+                            </select>
+                            <div class="error-message" id="assetLocationError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assetCondition">Kondisi</label>
+                            <select id="assetCondition" class="form-control" required>
+                                <option value="">Pilih Kondisi</option>
+                                <option value="Baik">Baik</option>
+                                <option value="Rusak Ringan">Rusak Ringan</option>
+                                <option value="Rusak Berat">Rusak Berat</option>
+                            </select>
+                            <div class="error-message" id="assetConditionError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="assetImage">Gambar Aset</label>
+                        <input type="file" id="assetImage" class="form-control" accept="image/*">
+                        <div class="image-preview" id="assetImagePreview"></div>
+                        <small class="form-text">Upload gambar aset (opsional)</small>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="closeModal('assetModal')">Batal</button>
+                        <button type="submit" class="btn btn-success" id="saveAssetBtn">
+                            <span class="btn-text">Simpan</span>
+                            <span class="loading-spinner" style="display: none;"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maintenance Modal -->
+    <div id="maintenanceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Catat Pemeliharaan</h3>
+                <button class="close-modal" onclick="closeModal('maintenanceModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="maintenanceForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="maintenanceAsset">Pilih Aset</label>
+                            <select id="maintenanceAsset" class="form-control" required>
+                                <option value="">Pilih Aset</option>
+                            </select>
+                            <div class="error-message" id="maintenanceAssetError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="maintenanceType">Jenis Pemeliharaan</label>
+                            <select id="maintenanceType" class="form-control" required>
+                                <option value="">Pilih Jenis</option>
+                                <option value="Preventif">Preventif</option>
+                                <option value="Corrective">Corrective</option>
+                                <option value="Predictive">Predictive</option>
+                                <option value="Emergency">Emergency</option>
+                            </select>
+                            <div class="error-message" id="maintenanceTypeError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="maintenanceDate">Tanggal Pemeliharaan</label>
+                            <input type="date" id="maintenanceDate" class="form-control" required>
+                            <div class="error-message" id="maintenanceDateError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="maintenanceCost">Biaya</label>
+                            <input type="number" id="maintenanceCost" class="form-control" required min="0">
+                            <div class="error-message" id="maintenanceCostError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="maintenanceDescription">Deskripsi Pemeliharaan</label>
+                        <textarea id="maintenanceDescription" class="form-control" rows="3" required></textarea>
+                        <div class="error-message" id="maintenanceDescriptionError"></div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="closeModal('maintenanceModal')">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Borrow Modal -->
+    <div id="borrowModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Pinjam Aset</h3>
+                <button class="close-modal" onclick="closeModal('borrowModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="borrowForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="borrowerName">Nama Peminjam</label>
+                            <input type="text" id="borrowerName" class="form-control" required>
+                            <div class="error-message" id="borrowerNameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="borrowerRole">Jabatan</label>
+                            <select id="borrowerRole" class="form-control" required>
+                                <option value="">Pilih Jabatan</option>
+                                <option value="Dosen">Dosen</option>
+                                <option value="Mahasiswa">Mahasiswa</option>
+                                <option value="Staff">Staff</option>
+                                <option value="Karyawan">Karyawan</option>
+                            </select>
+                            <div class="error-message" id="borrowerRoleError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="borrowAsset">Pilih Aset</label>
+                        <select id="borrowAsset" class="form-control" required>
+                            <option value="">Pilih Aset</option>
+                        </select>
+                        <div class="error-message" id="borrowAssetError"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="borrowDate">Tanggal Pinjam</label>
+                            <input type="date" id="borrowDate" class="form-control" required>
+                            <div class="error-message" id="borrowDateError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnDate">Tanggal Kembali</label>
+                            <input type="date" id="returnDate" class="form-control" required>
+                            <div class="error-message" id="returnDateError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="borrowPurpose">Tujuan Peminjaman</label>
+                        <textarea id="borrowPurpose" class="form-control" rows="3" required></textarea>
+                        <div class="error-message" id="borrowPurposeError"></div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="closeModal('borrowModal')">Batal</button>
+                        <button type="submit" class="btn btn-success">Pinjam</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Modal -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Tambah Pengguna</h3>
+                <button class="close-modal" onclick="closeModal('userModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userName">Nama Lengkap</label>
+                            <input type="text" id="userName" class="form-control" required>
+                            <div class="error-message" id="userNameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userUsername">Username</label>
+                            <input type="text" id="userUsername" class="form-control" required>
+                            <div class="error-message" id="userUsernameError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userPassword">Password</label>
+                            <input type="password" id="userPassword" class="form-control" required minlength="6">
+                            <div class="error-message" id="userPasswordError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userLevel">Level</label>
+                            <select id="userLevel" class="form-control" required>
+                                <option value="">Pilih Level</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Sarpras">Sarpras</option>
+                                <option value="Keuangan">Keuangan</option>
+                                <option value="Kaprodi">Kaprodi</option>
+                                <option value="Rektor">Rektor</option>
+                            </select>
+                            <div class="error-message" id="userLevelError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userAvatar">Foto Profil</label>
+                        <input type="file" id="userAvatar" class="form-control" accept="image/*">
+                        <div class="image-preview" id="userAvatarPreview"></div>
+                        <small class="form-text">Upload foto profil (opsional)</small>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary" onclick="closeModal('userModal')">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Request Modal -->
+    <div id="requestModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Ajukan Aset</h3>
+                <button class="close-modal" onclick="closeModal('requestModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="requestForm">
+                    <div class="form-group">
+                        <label for="requestAsset">Nama Aset yang Diajukan</label>
+                        <input type="text" id="requestAsset" class="form-control" required>
+                        <div class="error-message" id="requestAssetError"></div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="requestType">Jenis Aset</label>
+                            <select id="requestType" class="form-control" required>
+                                <option value="">Pilih Jenis</option>
+                                <option value="ELK">Elektronik</option>
+                                <option value="FUR">Furniture</option>
+                                <option value="KDR">Kendaraan</option>
+                                <option value="ATK">Alat Tulis</option>
+                                <option value="LAN">Lainnya</option>
+                            </select>
+                            <div class="error-message" id="requestTypeError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="requestQuantity">Jumlah</label>
+                            <input type="number" id="requestQuantity" class="form-control" min="1" required>
+                            <div class="error-message" id="requestQuantityError"></div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="requestEstimatedPrice">Estimasi Harga (per unit)</label>
+                            <input type="number" id="requestEstimatedPrice" class="form-control">
+                            <div class="error-message" id="requestEstimatedPriceError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="requestPriority">Prioritas</label>
+                            <select id="requestPriority" class="form-control" required>
+                                <option value="">Pilih Prioritas</option>
+                                <option value="Rendah">Rendah</option>
+                                <option value="Sedang">Sedang</option>
+                                <option value="Tinggi">Tinggi</option>
+                                <option value="Urgent">Urgent</option>
+                            </select>
+                            <div class="error-message" id="requestPriorityError"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="requestReason">Alasan Pengajuan</label>
+                        <textarea id="requestReason" class="form-control" rows="4" required></textarea>
+                        <div class="error-message" id="requestReasonError"></div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary"
+                            onclick="closeModal('requestModal')">Batal</button>
+                        <button type="submit" class="btn btn-success">Ajukan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Asset Detail Modal -->
+    <div id="assetDetailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Detail Aset</h3>
+                <button class="close-modal" onclick="closeModal('assetDetailModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="assetDetailContent">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barcode Scanner Modal -->
+    <div id="barcodeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Scan Barcode</h3>
+                <button class="close-modal" onclick="closeModal('barcodeModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center; padding: 2rem;">
+                    <div
+                        style="width: 200px; height: 200px; border: 2px dashed var(--border-color); margin: 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                        <span style="color: var(--text-secondary);">📷 Camera View</span>
+                    </div>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">
+                        Fitur barcode scanner akan segera tersedia
+                    </p>
+                    <button class="btn btn-primary" onclick="closeModal('barcodeModal')" style="margin-top: 1rem;">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Memproses...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

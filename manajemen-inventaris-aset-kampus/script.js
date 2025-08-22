@@ -1,10 +1,10 @@
 // Global Variables
 let assets = [
   {
-    id: "2024/01/ELK-0001",
+    id: "2024/01/KOM-0001", // Diubah dari ELK
     name: "Laptop HP ProBook",
-    type: "ELK",
-    typeName: "Elektronik",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
     brand: "HP",
     serial: "HP123456",
     location: "Ruang IT",
@@ -17,10 +17,10 @@ let assets = [
     barcode: "HP123456789",
   },
   {
-    id: "2024/01/ELK-0002",
+    id: "2024/01/KOM-0002", // Diubah dari ELK
     name: "Proyektor Epson",
-    type: "ELK",
-    typeName: "Elektronik",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
     brand: "Epson",
     serial: "EP789012",
     location: "Aula",
@@ -48,6 +48,3475 @@ let assets = [
     image: "assets/meja-kerja.jpeg",
     barcode: "OL345678901",
   },
+  // Aset baru dari CSV (dengan klasifikasi yang diperbarui)
+  {
+    id: "2024/01/KOM-0003", // Diubah dari ELK
+    name: "Deskbook",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Hp",
+    serial: "DBHP001",
+    location: "9 di lab TI, 1 di R. TI, 1 di R. Admin, 1 di TE",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Deskbook",
+    barcode: "DBHP001BC",
+  },
+  {
+    id: "2024/01/KOM-0004", // Diubah dari ELK
+    name: "Keyboard",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Logitech, Hp",
+    serial: "KB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 125000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Keyboard",
+    barcode: "KB001BC",
+  },
+  {
+    id: "2024/01/KOM-0005", // Diubah dari ELK
+    name: "Mouse",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Logitech, Hp",
+    serial: "MS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 70000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Mouse",
+    barcode: "MS001BC",
+  },
+  {
+    id: "2024/01/KOM-0006", // Diubah dari ELK
+    name: "Monitor DELL E2211H",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Dell",
+    serial: "MNDELL001",
+    location: "17 di lab TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 780000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Monitor+DELL",
+    barcode: "MNDELL001BC",
+  },
+  {
+    id: "2024/01/KOM-0007", // Diubah dari ELK
+    name: "PC Rakitan",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Asrock",
+    serial: "PCRAK001",
+    location: "17 di lab TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 3000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=PC+Rakitan",
+    barcode: "PCRAK001BC",
+  },
+  {
+    id: "2024/01/KOM-0008", // Diubah dari ELK
+    name: "Headphones JETE",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "JETE",
+    serial: "HPJETE001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Headphones+JETE",
+    barcode: "HPJETE001BC",
+  },
+  {
+    id: "2024/01/JAR-0001", // Diubah dari ELK
+    name: "Splicer",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Fusion",
+    serial: "SPLCR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Splicer",
+    barcode: "SPLCR001BC",
+  },
+  {
+    id: "2024/01/JAR-0002", // Diubah dari ELK
+    name: "Fiber optic 250 meter",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "",
+    serial: "FO250M001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 240000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Fiber+Optic",
+    barcode: "FO250M001BC",
+  },
+  {
+    id: "2024/01/JAR-0003", // Diubah dari ELK
+    name: "Switch tplink",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "tp-link",
+    serial: "SWTPLINK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 750000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Switch+TPLink",
+    barcode: "SWTPLINK001BC",
+  },
+  {
+    id: "2024/01/JAR-0004", // Diubah dari ELK
+    name: "HTB",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Netlink",
+    serial: "HTB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 100000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=HTB",
+    barcode: "HTB001BC",
+  },
+  {
+    id: "2024/01/FUR-0002",
+    name: "Rak rako",
+    type: "FUR",
+    typeName: "Furniture",
+    brand: "Raaco",
+    serial: "RAKRAKO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 450000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Rak+Raako",
+    barcode: "RAKRAKO001BC",
+  },
+  {
+    id: "2024/01/ATK-0001",
+    name: "CRIMPING BIRU schneider",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Schneider",
+    serial: "CRIMPSCH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 350000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Crimping+Schneider",
+    barcode: "CRIMPSCH001BC",
+  },
+  {
+    id: "2024/01/ATK-0002",
+    name: "CRIMPING BIRU trendnet",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Trendnet",
+    serial: "CRIMPTREND001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 350000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Crimping+Trendnet",
+    barcode: "CRIMPTREND001BC",
+  },
+  {
+    id: "2024/01/ATK-0003",
+    name: "CRIMPING Hijau HT-315",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "HT-315",
+    serial: "CRIMPHT315001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 35000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Crimping+HT-315",
+    barcode: "CRIMPHT315001BC",
+  },
+  {
+    id: "2024/01/ATK-0004",
+    name: "CRIMPING VENTION",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Vention",
+    serial: "CRIMPVENT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 150000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Crimping+Vention",
+    barcode: "CRIMPVENT001BC",
+  },
+  {
+    id: "2024/01/JAR-0005", // Diubah dari ELK
+    name: "SWITCH MANAGEABLE RB260GS",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Mikrotik",
+    serial: "SWMK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Switch+Mikrotik",
+    barcode: "SWMK001BC",
+  },
+  {
+    id: "2024/01/JAR-0006", // Diubah dari ELK
+    name: "ROUTERBOARD hAP RB951UI",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Mikrotik",
+    serial: "RBMK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1400000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Routerboard+Mikrotik",
+    barcode: "RBMK001BC",
+  },
+  {
+    id: "2024/01/JAR-0007", // Diubah dari ELK
+    name: "ROUTERBOARD hEX Series",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Mikrotik",
+    serial: "RBMKHEX001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1290000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Routerboard+Mikrotik+hEX",
+    barcode: "RBMKHEX001BC",
+  },
+  {
+    id: "2024/01/JAR-0008", // Diubah dari ELK
+    name: "Switch LS108G",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "tp-link",
+    serial: "SWTPLINKLS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 285000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Switch+TPLink+LS108G",
+    barcode: "SWTPLINKLS001BC",
+  },
+  {
+    id: "2024/01/JAR-0009", // Diubah dari ELK
+    name: "OTDR Joinwit JW3302",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "JW3302",
+    serial: "OTDRJW001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 23000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=OTDR+Joinwit",
+    barcode: "OTDRJW001BC",
+  },
+  {
+    id: "2024/01/JAR-0010", // Diubah dari ELK
+    name: "Router Cisco 1900 Series 1921",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Cisco",
+    serial: "RTRCISCO1900001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1550000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Router+Cisco+1900",
+    barcode: "RTRCISCO1900001BC",
+  },
+  {
+    id: "2024/01/JAR-0011", // Diubah dari ELK
+    name: "Router Cisco 2900 Series 2901",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Cisco",
+    serial: "RTRCISCO2900001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1550000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Router+Cisco+2900",
+    barcode: "RTRCISCO2900001BC",
+  },
+  {
+    id: "2024/01/JAR-0012", // Diubah dari ELK
+    name: "Switch HUB Cisco Catalyst 2960 48 port POE",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Cisco",
+    serial: "SWHUBCISCO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1850000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Switch+Cisco+POE",
+    barcode: "SWHUBCISCO001BC",
+  },
+  {
+    id: "2024/01/LAN-0001",
+    name: "Container Box cb 82 hijau",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "Shinpo",
+    serial: "CBH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 140000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Container+Box",
+    barcode: "CBH001BC",
+  },
+  {
+    id: "2024/01/LAN-0002",
+    name: "Container Box cb 82 biru",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "Shinpo",
+    serial: "CBB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 140000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Container+Box",
+    barcode: "CBB001BC",
+  },
+  {
+    id: "2024/01/ATK-0005",
+    name: "Toolbox kenmaster H415",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Kenmaster",
+    serial: "TBKM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 100000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Toolbox+Kenmaster",
+    barcode: "TBKM001BC",
+  },
+  {
+    id: "2024/01/KOM-0009", // Diubah dari ELK
+    name: "Ram Kingston KVR26N19S8/8",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Kingston",
+    serial: "RAMKNG001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 550000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RAM+Kingston",
+    barcode: "RAMKNG001BC",
+  },
+  {
+    id: "2024/01/KOM-0010", // Diubah dari ELK
+    name: "Ram 4 GB 2RX8",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "RAM4GB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 250000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RAM+4GB",
+    barcode: "RAM4GB001BC",
+  },
+  {
+    id: "2024/01/ATK-0006",
+    name: "crimping",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "LG",
+    serial: "CRIMPINGLG001",
+    location: "di lab TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 3500000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Crimping+LG",
+    barcode: "CRIMPINGLG001BC",
+  },
+  {
+    id: "2024/01/LAN-0003",
+    name: "Tripod",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "",
+    serial: "TRIPOD001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 160000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Tripod",
+    barcode: "TRIPOD001BC",
+  },
+  {
+    id: "2024/01/FUR-0003",
+    name: "Kursi",
+    type: "FUR",
+    typeName: "Furniture",
+    brand: "",
+    serial: "KRSI001",
+    location: "26 di lab TI (1 rusak), 4 di R. TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 300000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kursi",
+    barcode: "KRSI001BC",
+  },
+  {
+    id: "2024/01/FUR-0004",
+    name: "Meja",
+    type: "FUR",
+    typeName: "Furniture",
+    brand: "",
+    serial: "MEJA001",
+    location: "di lab TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Meja",
+    barcode: "MEJA001BC",
+  },
+  {
+    id: "2024/01/FUR-0005",
+    name: "Papan Tulis",
+    type: "FUR",
+    typeName: "Furniture",
+    brand: "",
+    serial: "PAPTUL001",
+    location: "di lab TI",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 680000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Papan+Tulis",
+    barcode: "PAPTUL001BC",
+  },
+  {
+    id: "2024/01/JAR-0013", // Diubah dari ELK
+    name: "kabel LAN CAT 6",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "",
+    serial: "KBLAN001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 220000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+LAN",
+    barcode: "KBLAN001BC",
+  },
+  {
+    id: "2024/01/KOM-0011", // Diubah dari ELK
+    name: "Kabel VGA",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "KBVGA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+VGA",
+    barcode: "KBVGA001BC",
+  },
+  {
+    id: "2024/01/ELK-0025",
+    name: "Sensor LDR",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRLDR001",
+    location: "di laci biru A",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+LDR",
+    barcode: "SNSRLDR001BC",
+  },
+  {
+    id: "2024/01/ELK-0026",
+    name: "LED Hijau",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LEDH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LED+Hijau",
+    barcode: "LEDH001BC",
+  },
+  {
+    id: "2024/01/ELK-0027",
+    name: "LED Merah",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LEDM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LED+Merah",
+    barcode: "LEDM001BC",
+  },
+  {
+    id: "2024/01/ELK-0028",
+    name: "LED Kuning",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LEDK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LED+Kuning",
+    barcode: "LEDK001BC",
+  },
+  {
+    id: "2024/01/ELK-0029",
+    name: "Sensor Infrared Receiver",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRIR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 3000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Infrared",
+    barcode: "SNSRIR001BC",
+  },
+  {
+    id: "2024/01/ELK-0030",
+    name: "Push Button Kecil",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PBK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Push+Button",
+    barcode: "PBK001BC",
+  },
+  {
+    id: "2024/01/ELK-0031",
+    name: "Module Push Button",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MPB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+Push+Button",
+    barcode: "MPB001BC",
+  },
+  {
+    id: "2024/01/ELK-0032",
+    name: "Resistor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RESISTOR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 100,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Resistor",
+    barcode: "RESISTOR001BC",
+  },
+  {
+    id: "2024/01/ELK-0033",
+    name: "Kapasitor 220",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KAP220001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kapasitor+220",
+    barcode: "KAP220001BC",
+  },
+  {
+    id: "2024/01/ELK-0034",
+    name: "Kapasitor 100",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KAP100001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kapasitor+100",
+    barcode: "KAP100001BC",
+  },
+  {
+    id: "2024/01/ELK-0035",
+    name: "Sensor Humidity",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRHUM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Humidity",
+    barcode: "SNSRHUM001BC",
+  },
+  {
+    id: "2024/01/ELK-0036",
+    name: "Module Sensor Humidity",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MSNHUM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+Sensor+Humidity",
+    barcode: "MSNHUM001BC",
+  },
+  {
+    id: "2024/01/ELK-0037",
+    name: "Temperature and Humidity WiFi node module",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "THWNM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Temp+Humidity+WiFi+Module",
+    barcode: "THWNM001BC",
+  },
+  {
+    id: "2024/01/ELK-0038",
+    name: "Sensor vibration",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRVIB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Vibration",
+    barcode: "SNSRVIB001BC",
+  },
+  {
+    id: "2024/01/ELK-0039",
+    name: "Sensor heartbeat (detak jantung)",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRHRT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Heartbeat",
+    barcode: "SNSRHRT001BC",
+  },
+  {
+    id: "2024/01/ELK-0040",
+    name: "Module RGB LED",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MRGBLED001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+RGB+LED",
+    barcode: "MRGBLED001BC",
+  },
+  {
+    id: "2024/01/ELK-0041",
+    name: "Modul Power Step Up Charger Boost 18650 2A",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MPSUCB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 42000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Modul+Power+Step+Up",
+    barcode: "MPSUCB001BC",
+  },
+  {
+    id: "2024/01/ELK-0042",
+    name: "Color Sensor TCS-230",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "CSNSRTCS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 130000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Color+Sensor+TCS-230",
+    barcode: "CSNSRTCS001BC",
+  },
+  {
+    id: "2024/01/ELK-0043",
+    name: "Step Down 12 to 5V usb",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SD12TO5V001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Step+Down+Module",
+    barcode: "SD12TO5V001BC",
+  },
+  {
+    id: "2024/01/ELK-0044",
+    name: "RGB LED 4 color",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RGBLED4C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 3000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RGB+LED+4+Color",
+    barcode: "RGBLED4C001BC",
+  },
+  {
+    id: "2024/01/ELK-0045",
+    name: "RGB LED 2 color",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RGBLED2C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 2000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RGB+LED+2+Color",
+    barcode: "RGBLED2C001BC",
+  },
+  {
+    id: "2024/01/ELK-0046",
+    name: "Passive Buzzer",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PSVBZR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Passive+Buzzer",
+    barcode: "PSVBZR001BC",
+  },
+  {
+    id: "2024/01/ELK-0047",
+    name: "Buzzer Active",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BZRAC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Buzzer+Active",
+    barcode: "BZRAC001BC",
+  },
+  {
+    id: "2024/01/ELK-0048",
+    name: "Sensor Temperature LM35",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRTMPLM35001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 6000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Temperature+LM35",
+    barcode: "SNSRTMPLM35001BC",
+  },
+  {
+    id: "2024/01/ELK-0049",
+    name: "Infrared receiver module",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "IRRCM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Infrared+Receiver+Module",
+    barcode: "IRRCM001BC",
+  },
+  {
+    id: "2024/01/ELK-0050",
+    name: "Module RGB",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MRGB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 4900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+RGB",
+    barcode: "MRGB001BC",
+  },
+  {
+    id: "2024/01/ELK-0051",
+    name: "sensor metal touch",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRMT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 12000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Metal+Touch",
+    barcode: "SNSRMT001BC",
+  },
+  {
+    id: "2024/01/ELK-0052",
+    name: "modul infrared transmitter",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MIT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Modul+Infrared+Transmitter",
+    barcode: "MIT001BC",
+  },
+  {
+    id: "2024/01/ELK-0053",
+    name: "modul temperature",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MTMP001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 125000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Modul+Temperature",
+    barcode: "MTMP001BC",
+  },
+  {
+    id: "2024/01/ELK-0054",
+    name: "sensor magic light cup",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSMLC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Magic+Light+Cup",
+    barcode: "SNSMLC001BC",
+  },
+  {
+    id: "2024/01/ELK-0055",
+    name: "sensor temperature analog",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSATMP001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Temperature+Analog",
+    barcode: "SNSATMP001BC",
+  },
+  {
+    id: "2024/01/ELK-0056",
+    name: "laser transmit",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LSRTRNS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Laser+Transmit",
+    barcode: "LSRTRNS001BC",
+  },
+  {
+    id: "2024/01/ELK-0057",
+    name: "module LDR",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MLDR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5800,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+LDR",
+    barcode: "MLDR001BC",
+  },
+  {
+    id: "2024/01/ELK-0058",
+    name: "Photo Interup Sensor Module",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PISM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Photo+Interup+Sensor+Module",
+    barcode: "PISM001BC",
+  },
+  {
+    id: "2024/01/ELK-0059",
+    name: "Obstacle avoidance",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "OA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5600,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Obstacle+Avoidance",
+    barcode: "OA001BC",
+  },
+  {
+    id: "2024/01/ELK-0060",
+    name: "Sensor tracking",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRTRK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 6000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Tracking",
+    barcode: "SNSRTRK001BC",
+  },
+  {
+    id: "2024/01/ELK-0061",
+    name: "sensor digital temperature",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSDTMP001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Digital+Temperature",
+    barcode: "SNSDTMP001BC",
+  },
+  {
+    id: "2024/01/ELK-0062",
+    name: "IC L7805CV",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ICL7805CV001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 4000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=IC+L7805CV",
+    barcode: "ICL7805CV001BC",
+  },
+  {
+    id: "2024/01/ELK-0063",
+    name: "Infrared Emiting Dioda",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "IRED001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 700,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Infrared+Emitting+Diode",
+    barcode: "IRED001BC",
+  },
+  {
+    id: "2024/01/ELK-0064",
+    name: "RGB LED sensor module KS 3 color",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RGBLED3CKS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 18000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RGB+LED+Sensor+Module+KS+3+Color",
+    barcode: "RGBLED3CKS001BC",
+  },
+  {
+    id: "2024/01/ELK-0065",
+    name: "IC 74HC595N",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "IC74HC595N001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1200,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=IC+74HC595N",
+    barcode: "IC74HC595N001BC",
+  },
+  {
+    id: "2024/01/ELK-0066",
+    name: "Sensor APi",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSAPI001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+API",
+    barcode: "SNSAPI001BC",
+  },
+  {
+    id: "2024/01/ELK-0067",
+    name: "Module RGB 7 color",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MRGB7C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 50000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+RGB+7+Color",
+    barcode: "MRGB7C001BC",
+  },
+  {
+    id: "2024/01/ELK-0068",
+    name: "TILT switch",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "TILTSW001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5300,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=TILT+Switch",
+    barcode: "TILTSW001BC",
+  },
+  {
+    id: "2024/01/ELK-0069",
+    name: "Hall Sensor magnetic",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "HSM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 6600,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Hall+Sensor+Magnetic",
+    barcode: "HSM001BC",
+  },
+  {
+    id: "2024/01/ELK-0070",
+    name: "Mini magnetic reed sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MMRS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Mini+Magnetic+Reed+Sensor",
+    barcode: "MMRS001BC",
+  },
+  {
+    id: "2024/01/ELK-0071",
+    name: "Tap Module knocking",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "TMK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Tap+Module+Knocking",
+    barcode: "TMK001BC",
+  },
+  {
+    id: "2024/01/ELK-0072",
+    name: "Module RGB 2 color",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MRGB2C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+RGB+2+Color",
+    barcode: "MRGB2C001BC",
+  },
+  {
+    id: "2024/01/ELK-0073",
+    name: "Mini mercury type TILT sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MMTTS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 78000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Mini+Mercury+Type+TILT+Sensor",
+    barcode: "MMTTS001BC",
+  },
+  {
+    id: "2024/01/ELK-0074",
+    name: "Seven segmen kecil 1 channel",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SSK1C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 3000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Seven+Segment+Kecil",
+    barcode: "SSK1C001BC",
+  },
+  {
+    id: "2024/01/ELK-0075",
+    name: "Seven segmen sedang 1 channel",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SSS1C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Seven+Segment+Sedang",
+    barcode: "SSS1C001BC",
+  },
+  {
+    id: "2024/01/ELK-0076",
+    name: "Seven Segmen sedang 4 channel",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SSS4C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Seven+Segment+Sedang+4+Channel",
+    barcode: "SSS4C001BC",
+  },
+  {
+    id: "2024/01/ELK-0077",
+    name: "Seven Segmen besar 4 channel",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SSB4C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5400,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Seven+Segment+Besar+4+Channel",
+    barcode: "SSB4C001BC",
+  },
+  {
+    id: "2024/01/ELK-0078",
+    name: "Microphone sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MICSNS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Microphone+Sensor",
+    barcode: "MICSNS001BC",
+  },
+  {
+    id: "2024/01/ELK-0079",
+    name: "Small Microphone sensor 038",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SMICSNS038001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Small+Microphone+Sensor+038",
+    barcode: "SMICSNS038001BC",
+  },
+  {
+    id: "2024/01/ELK-0080",
+    name: "Sensor Hall",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSHALL001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Hall",
+    barcode: "SNSHALL001BC",
+  },
+  {
+    id: "2024/01/ELK-0081",
+    name: "Sensor suara",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSSUARA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5999,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Suara",
+    barcode: "SNSSUARA001BC",
+  },
+  {
+    id: "2024/01/ELK-0082",
+    name: "Potensio meter",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "POTENSIO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 2200,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Potensiometer",
+    barcode: "POTENSIO001BC",
+  },
+  {
+    id: "2024/01/ELK-0083",
+    name: "Module RTC",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MODRTC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 37000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+RTC",
+    barcode: "MODRTC001BC",
+  },
+  {
+    id: "2024/01/ELK-0084",
+    name: "Water sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "WTRSNS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 6500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Water+Sensor",
+    barcode: "WTRSNS001BC",
+  },
+  {
+    id: "2024/01/ELK-0085",
+    name: "Driver motor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "DRVMTR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 60000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Driver+Motor",
+    barcode: "DRVMTR001BC",
+  },
+  {
+    id: "2024/01/ELK-0086",
+    name: "LED matrix",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LEDMTX001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 43000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LED+Matrix",
+    barcode: "LEDMTX001BC",
+  },
+  {
+    id: "2024/01/ELK-0087",
+    name: "Battery Connector",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BTCNCTR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 2500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Battery+Connector",
+    barcode: "BTCNCTR001BC",
+  },
+  {
+    id: "2024/01/ELK-0088",
+    name: "Pin header male",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PHM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1800,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Pin+Header+Male",
+    barcode: "PHM001BC",
+  },
+  {
+    id: "2024/01/ATK-0007",
+    name: "Pasta Processor HG GY260",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "",
+    serial: "PSTPRC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 37900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Pasta+Processor",
+    barcode: "PSTPRC001BC",
+  },
+  {
+    id: "2024/01/ELK-0089",
+    name: "magnetic spring",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MGSPR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 73500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Magnetic+Spring",
+    barcode: "MGSPR001BC",
+  },
+  {
+    id: "2024/01/ELK-0090",
+    name: "Rotary Encoder",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RTENC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 4900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Rotary+Encoder",
+    barcode: "RTENC001BC",
+  },
+  {
+    id: "2024/01/ELK-0091",
+    name: "Thermistor temperature sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "TMPSNS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 6000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Thermistor+Temperature+Sensor",
+    barcode: "TMPSNS001BC",
+  },
+  {
+    id: "2024/01/ELK-0092",
+    name: "LCD Shield Kit w/ 16×2 Character Display with buttons",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LCDSK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 347000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LCD+Shield+Kit",
+    barcode: "LCDSK001BC",
+  },
+  {
+    id: "2024/01/ELK-0093",
+    name: "SD card module with SPI for Arduino",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SDCM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 100000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=SD+Card+Module",
+    barcode: "SDCM001BC",
+  },
+  {
+    id: "2024/01/ELK-0094",
+    name: "1 x 433Mhz receiver XY-MK-5V",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "433RX001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 4500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=433Mhz+Receiver",
+    barcode: "433RX001BC",
+  },
+  {
+    id: "2024/01/ELK-0095",
+    name: "2 x nRF24L01+ modules",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "NRF24L01001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=nRF24L01+Modules",
+    barcode: "NRF24L01001BC",
+  },
+  {
+    id: "2024/01/ELK-0096",
+    name: "Adafruit Bluefruit LE UART Friend",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "Adafruit",
+    serial: "ADAFRUITBLE001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1377000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Adafruit+Bluefruit",
+    barcode: "ADAFRUITBLE001BC",
+  },
+  {
+    id: "2024/01/ELK-0097",
+    name: "Adafruit BLE breakout with the nRF8001 module",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "Adafruit",
+    serial: "ADAFRUITBLE8001001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 919300,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Adafruit+BLE+nRF8001",
+    barcode: "ADAFRUITBLE8001001BC",
+  },
+  {
+    id: "2024/01/ELK-0098",
+    name: "HC-06 Bluetooth module",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "HC06BT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 21500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=HC-06+Bluetooth+Module",
+    barcode: "HC06BT001BC",
+  },
+  {
+    id: "2024/01/ELK-0099",
+    name: "DHT22 sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "DHT22SNSR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=DHT22+Sensor",
+    barcode: "DHT22SNSR001BC",
+  },
+  {
+    id: "2024/01/ELK-0100",
+    name: '240x320 2.2" TFT screen with the ILI9340C controller',
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "TFT240X320001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 170000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=TFT+Screen",
+    barcode: "TFT240X320001BC",
+  },
+  {
+    id: "2024/01/ELK-0101",
+    name: 'Flex sensor, 2.2" (5.588cm) long',
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "FLEXSNSR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 300000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Flex+Sensor",
+    barcode: "FLEXSNSR001BC",
+  },
+  {
+    id: "2024/01/ELK-0102",
+    name: "3 x TIP122 Darlington transistors",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "TIP122DT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1750,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=TIP122+Transistors",
+    barcode: "TIP122DT001BC",
+  },
+  {
+    id: "2024/01/ELK-0103",
+    name: "74HC595 shift register ICs N",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "74HC595SR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1200,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=74HC595+Shift+Register",
+    barcode: "74HC595SR001BC",
+  },
+  {
+    id: "2024/01/ELK-0104",
+    name: '0.56" 4-digit Seven segment clock display with I2C backpack',
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SSCDI2C001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 28000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Seven+Segment+Clock+Display",
+    barcode: "SSCDI2C001BC",
+  },
+  {
+    id: "2024/01/ELK-0105",
+    name: "MM74C922 decoder IC",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MM74C922IC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 45000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=MM74C922+Decoder+IC",
+    barcode: "MM74C922IC001BC",
+  },
+  {
+    id: "2024/01/ELK-0106",
+    name: "Rotary encoder",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RTENC2001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Rotary+Encoder",
+    barcode: "RTENC2001BC",
+  },
+  {
+    id: "2024/01/ELK-0107",
+    name: "MPU6050 sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MPU6050SNSR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 21500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=MPU6050+Sensor",
+    barcode: "MPU6050SNSR001BC",
+  },
+  {
+    id: "2024/01/ELK-0108",
+    name: "RF Relay Switch Remote Controller 433Mhz Wireless Relay 2ch Remote",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RFRSWRC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 121000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RF+Relay+Switch+Remote+Controller",
+    barcode: "RFRSWRC001BC",
+  },
+  {
+    id: "2024/01/ELK-0109",
+    name: "Analog sound sensor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ASNS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Analog+Sound+Sensor",
+    barcode: "ASNS001BC",
+  },
+  {
+    id: "2024/01/ELK-0110",
+    name: "Unipolar stepper motor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 100000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Unipolar+Stepper+Motor",
+    barcode: "USM001BC",
+  },
+  {
+    id: "2024/01/ELK-0111",
+    name: "2 x 5V DC motors",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "5VDCM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=5V+DC+Motors",
+    barcode: "5VDCM001BC",
+  },
+  {
+    id: "2024/01/ELK-0112",
+    name: "Assorted through-hole resistors",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ATHR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Assorted+Resistors",
+    barcode: "ATHR001BC",
+  },
+  {
+    id: "2024/01/ELK-0113",
+    name: "L8871 motor controller",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "L8871MC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 30000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=L8871+Motor+Controller",
+    barcode: "L8871MC001BC",
+  },
+  {
+    id: "2024/01/ELK-0114",
+    name: "NEMA17 stepper motor",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "NEMA17SM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 140000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=NEMA17+Stepper+Motor",
+    barcode: "NEMA17SM001BC",
+  },
+  {
+    id: "2024/01/ELK-0115",
+    name: "NEOPIXEL LED MODULES 5X8",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "NEOPIXEL5X8001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 45000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=NEOPIXEL+LED+Modules",
+    barcode: "NEOPIXEL5X8001BC",
+  },
+  {
+    id: "2024/01/ELK-0116",
+    name: "node mcu (ESP8266)",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "NODEMCUESP8266001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 39500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=NodeMCU+ESP8266",
+    barcode: "NODEMCUESP8266001BC",
+  },
+  {
+    id: "2024/01/ELK-0117",
+    name: "ESP32 MODULE",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ESP32MODULE001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=ESP32+Module",
+    barcode: "ESP32MODULE001BC",
+  },
+  {
+    id: "2024/01/ELK-0118",
+    name: "PIR",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PIR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=PIR+Sensor",
+    barcode: "PIR001BC",
+  },
+  {
+    id: "2024/01/ELK-0119",
+    name: "JOYSTIK",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "JOYSTIK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 8800,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Joystick",
+    barcode: "JOYSTIK001BC",
+  },
+  {
+    id: "2024/01/ELK-0120",
+    name: "MOTOR STEPER",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MTRSTP001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Motor+Stepper",
+    barcode: "MTRSTP001BC",
+  },
+  {
+    id: "2024/01/ELK-0121",
+    name: "LCD 16X2",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "LCD16X2001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 13500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=LCD+16x2",
+    barcode: "LCD16X2001BC",
+  },
+  {
+    id: "2024/01/ELK-0122",
+    name: "RELAY 1 CHANNEL",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RLY1CH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9300,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Relay+1+Channel",
+    barcode: "RLY1CH001BC",
+  },
+  {
+    id: "2024/01/ELK-0123",
+    name: "RELAY 2 CHANNEL",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RLY2CH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Relay+2+Channel",
+    barcode: "RLY2CH001BC",
+  },
+  {
+    id: "2024/01/ELK-0124",
+    name: "RELAY 4 CHANNEL",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RLY4CH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 23900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Relay+4+Channel",
+    barcode: "RLY4CH001BC",
+  },
+  {
+    id: "2024/01/ELK-0125",
+    name: "MODUL DHT22",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MODDHT22001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 19000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Modul+DHT22",
+    barcode: "MODDHT22001BC",
+  },
+  {
+    id: "2024/01/ELK-0126",
+    name: "SENSOR ULTRASONIK",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRULTRA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 16500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Ultrasonik",
+    barcode: "SNSRULTRA001BC",
+  },
+  {
+    id: "2024/01/ELK-0127",
+    name: "FRAME ULTRASONIK",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "FRMULTRA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Frame+Ultrasonik",
+    barcode: "FRMULTRA001BC",
+  },
+  {
+    id: "2024/01/ELK-0128",
+    name: "RFID SET",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "RFIDSET001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 22000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RFID+Set",
+    barcode: "RFIDSET001BC",
+  },
+  {
+    id: "2024/01/ELK-0129",
+    name: "USB TYPE mini B",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USBMINIB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 7000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=USB+Type+Mini+B",
+    barcode: "USBMINIB001BC",
+  },
+  {
+    id: "2024/01/ELK-0130",
+    name: "USB TYPE B",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USBB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=USB+Type+B",
+    barcode: "USBB001BC",
+  },
+  {
+    id: "2024/01/ELK-0131",
+    name: "USB TYPE MIKRO",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USBMICRO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 10000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=USB+Type+Micro",
+    barcode: "USBMICRO001BC",
+  },
+  {
+    id: "2024/01/ELK-0132",
+    name: "USB TYPE MIKRO 1 METER",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USBMICRO1M001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 40000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=USB+Type+Micro+1+Meter",
+    barcode: "USBMICRO1M001BC",
+  },
+  {
+    id: "2024/01/ELK-0133",
+    name: "USB TYPE C",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "USBC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=USB+Type+C",
+    barcode: "USBC001BC",
+  },
+  {
+    id: "2024/01/ELK-0134",
+    name: "BREADBOARD 0,3 - 0,8 MM",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BREADBOARD001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 12000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Breadboard",
+    barcode: "BREADBOARD001BC",
+  },
+  {
+    id: "2024/01/ELK-0135",
+    name: "ARDUINO UNO R3",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ARDUINOUNOR3001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 99900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Arduino+Uno+R3",
+    barcode: "ARDUINOUNOR3001BC",
+  },
+  {
+    id: "2024/01/ELK-0136",
+    name: "ARDUINO UNO CLON",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ARDUINOUNOCLON001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 50000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Arduino+Uno+Clon",
+    barcode: "ARDUINOUNOCLON001BC",
+  },
+  {
+    id: "2024/01/ELK-0137",
+    name: "ARDUINO MEGA",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ARDUINOMEGA001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 225000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Arduino+Mega",
+    barcode: "ARDUINOMEGA001BC",
+  },
+  {
+    id: "2024/01/ELK-0138",
+    name: "WEMOS D1 MINI",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "WEMOSD1MINI001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 29900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Wemos+D1+Mini",
+    barcode: "WEMOSD1MINI001BC",
+  },
+  {
+    id: "2024/01/ELK-0139",
+    name: "ETHERNET SHIELD DFROBOT 21/45",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "DFROBOT",
+    serial: "ETHSHIELDDFR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 345000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Ethernet+Shield+DFRobot",
+    barcode: "ETHSHIELDDFR001BC",
+  },
+  {
+    id: "2024/01/ELK-0140",
+    name: "ETHERNET SHIELD 22/03",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ETHSHIELD2203001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 130000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Ethernet+Shield",
+    barcode: "ETHSHIELD2203001BC",
+  },
+  {
+    id: "2024/01/ELK-0141",
+    name: "ETHERNET SHIELD 20/10",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ETHSHIELD2010001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 130000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Ethernet+Shield",
+    barcode: "ETHSHIELD2010001BC",
+  },
+  {
+    id: "2024/01/ELK-0142",
+    name: "ARDUINO NANO",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ARDUINONANO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 42900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Arduino+Nano",
+    barcode: "ARDUINONANO001BC",
+  },
+  {
+    id: "2024/01/ELK-0143",
+    name: "ESP32 CAM",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ESP32CAM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 95000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=ESP32+CAM",
+    barcode: "ESP32CAM001BC",
+  },
+  {
+    id: "2024/01/ELK-0144",
+    name: "BOARD ESP32 CAM",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BOARDESP32CAM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 30000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Board+ESP32+CAM",
+    barcode: "BOARDESP32CAM001BC",
+  },
+  {
+    id: "2024/01/ELK-0145",
+    name: "BREADBOARD POWER SUPLY",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BBPS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Breadboard+Power+Supply",
+    barcode: "BBPS001BC",
+  },
+  {
+    id: "2024/01/ELK-0146",
+    name: "EKSPANSION SENSOR SHIELD",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "ESSHIELD001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 24700,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Ekspansion+Sensor+Shield",
+    barcode: "ESSHIELD001BC",
+  },
+  {
+    id: "2024/01/ELK-0147",
+    name: "MODULE L298N",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "MODL298N001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 17500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Module+L298N",
+    barcode: "MODL298N001BC",
+  },
+  {
+    id: "2024/01/ELK-0148",
+    name: "SENSOR SHIELD V5.0",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRSHIELDV50001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 22500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Shield+V5.0",
+    barcode: "SNSRSHIELDV50001BC",
+  },
+  {
+    id: "2024/01/ELK-0149",
+    name: "SOIL MOISTURE",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SOILMOISTURE001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 13100,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Soil+Moisture+Sensor",
+    barcode: "SOILMOISTURE001BC",
+  },
+  {
+    id: "2024/01/ELK-0150",
+    name: "SENSOR GAS",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SNSRGAS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Sensor+Gas",
+    barcode: "SNSRGAS001BC",
+  },
+  {
+    id: "2024/01/ELK-0151",
+    name: "OLED LCD",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "OLEDLCD001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=OLED+LCD",
+    barcode: "OLEDLCD001BC",
+  },
+  {
+    id: "2024/01/ELK-0152",
+    name: "SAKLAR SWITCH BESAR",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SWSB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Saklar+Switch+Besar",
+    barcode: "SWSB001BC",
+  },
+  {
+    id: "2024/01/ELK-0153",
+    name: "SAKLAR SWITCH SEDANG",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SWSS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Saklar+Switch+Sedang",
+    barcode: "SWSS001BC",
+  },
+  {
+    id: "2024/01/ELK-0154",
+    name: "SAKLAR SWITCH KECIL",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SWSK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 700,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Saklar+Switch+Kecil",
+    barcode: "SWSK001BC",
+  },
+  {
+    id: "2024/01/ELK-0155",
+    name: "GSM-GPRS-GPS-BT-SHIELD",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "GSMGPRSGPSBTSHIELD001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 400000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=GSM-GPRS-GPS-BT-Shield",
+    barcode: "GSMGPRSGPSBTSHIELD001BC",
+  },
+  {
+    id: "2024/01/ELK-0156",
+    name: "GY-NEO6MV2",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "GYNEO6MV2001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 43900,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=GY-NEO6MV2",
+    barcode: "GYNEO6MV2001BC",
+  },
+  {
+    id: "2024/01/ELK-0157",
+    name: "KONEKTOR JACK",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KNKTRJACK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 2300,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Konektor+Jack",
+    barcode: "KNKTRJACK001BC",
+  },
+  {
+    id: "2024/01/ELK-0158",
+    name: "SERVO",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "SERVO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 23000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Servo",
+    barcode: "SERVO001BC",
+  },
+  {
+    id: "2024/01/ELK-0159",
+    name: "KABEL JUMPER MALE TO MALE",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KJM2M001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 11000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+Jumper+Male+to+Male",
+    barcode: "KJM2M001BC",
+  },
+  {
+    id: "2024/01/ELK-0160",
+    name: "KABEL JUMPER MALE TO FEMALE",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KJM2F001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+Jumper+Male+to+Female",
+    barcode: "KJM2F001BC",
+  },
+  {
+    id: "2024/01/ELK-0161",
+    name: "KABEL JUMPER FEMALE TO FEMALE",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "KJF2F001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 9500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+Jumper+Female+to+Female",
+    barcode: "KJF2F001BC",
+  },
+  {
+    id: "2024/01/ELK-0162",
+    name: "BATERAI GP SUPER",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "GP",
+    serial: "BTGPSUPER001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 8000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+GP+Super",
+    barcode: "BTGPSUPER001BC",
+  },
+  {
+    id: "2024/01/ELK-0163",
+    name: "BATERAI HARVEST LIGHTING",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "Harvest Lighting",
+    serial: "BTHL001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 110000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+Harvest+Lighting",
+    barcode: "BTHL001BC",
+  },
+  {
+    id: "2024/01/ELK-0164",
+    name: "BATERAI LGDBHG21865",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "LG",
+    serial: "BTLGDBHG21865001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 55000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+LGDBHG21865",
+    barcode: "BTLGDBHG21865001BC",
+  },
+  {
+    id: "2024/01/ELK-0165",
+    name: "BATERAI WARNA BIRU",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BTWB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 55000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+Warna+Biru",
+    barcode: "BTWB001BC",
+  },
+  {
+    id: "2024/01/ELK-0166",
+    name: "BATU BATERAI",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BTBT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Batu+Baterai",
+    barcode: "BTBT001BC",
+  },
+  {
+    id: "2024/01/ELK-0167",
+    name: "BATERAI HOLDER 2 BESAR",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BTH2B001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 7000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+Holder+2+Besar",
+    barcode: "BTH2B001BC",
+  },
+  {
+    id: "2024/01/ELK-0168",
+    name: "BATERAI HOLDER 4 KECIL",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "BTH4K001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 5000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+Holder+4+Kecil",
+    barcode: "BTH4K001BC",
+  },
+  {
+    id: "2024/01/ELK-0169",
+    name: "PUSHBUTTON",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "",
+    serial: "PUSHBUTTON001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Pushbutton",
+    barcode: "PUSHBUTTON001BC",
+  },
+  {
+    id: "2024/01/JAR-0014", // Diubah dari ELK
+    name: "CABLE TESTER",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "",
+    serial: "CBLTSTR001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 32000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Cable+Tester",
+    barcode: "CBLTSTR001BC",
+  },
+  {
+    id: "2024/01/JAR-0015", // Diubah dari ELK
+    name: "RJ45 DATA FAST CAT 5E",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Data Fast",
+    serial: "RJ45DF5E001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RJ45+Data+Fast+CAT+5E",
+    barcode: "RJ45DF5E001BC",
+  },
+  {
+    id: "2024/01/JAR-0016", // Diubah dari ELK
+    name: "RJ45 AMP CAT 6",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "AMP",
+    serial: "RJ45AMP6001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 150000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=RJ45+AMP+CAT+6",
+    barcode: "RJ45AMP6001BC",
+  },
+  {
+    id: "2024/01/ATK-0008",
+    name: "JOINWIT CATV/FTTH Tool Kit SET Lengkap OPM VFL Cleaver FO",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Joinwit",
+    serial: "JWTOOLKIT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 1000000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Joinwit+Tool+Kit",
+    barcode: "JWTOOLKIT001BC",
+  },
+  {
+    id: "2024/01/ELK-0173",
+    name: "Baterai alkaline",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "Alkaline",
+    serial: "BTALK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 60000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Baterai+Alkaline",
+    barcode: "BTALK001BC",
+  },
+  {
+    id: "2024/01/JAR-0017", // Diubah dari ELK
+    name: "Connector FO",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "",
+    serial: "CNCTFO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 40000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Connector+FO",
+    barcode: "CNCTFO001BC",
+  },
+  {
+    id: "2024/01/ATK-0009",
+    name: "Cable Tis Putih",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "Cavanni",
+    serial: "CTP001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Cable+Tis+Putih",
+    barcode: "CTP001BC",
+  },
+  {
+    id: "2024/01/ATK-0010",
+    name: "Cable Tis Hitam",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "",
+    serial: "CTH001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 20000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Cable+Tis+Hitam",
+    barcode: "CTH001BC",
+  },
+  {
+    id: "2024/01/JAR-0018", // Diubah dari ELK
+    name: "KONEKTOR VENTION ABU",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Vention",
+    serial: "KNKTRVENTABU001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 22000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Konektor+Vention+Abu",
+    barcode: "KNKTRVENTABU001BC",
+  },
+  {
+    id: "2024/01/JAR-0019", // Diubah dari ELK
+    name: "KONEKTOR VENTION HITAM",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Vention",
+    serial: "KNKTRVENTHITAM001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 15000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Konektor+Vention+Hitam",
+    barcode: "KNKTRVENTHITAM001BC",
+  },
+  {
+    id: "2024/01/LAN-0004",
+    name: "AL-QUR'AN MUSHAF TILAWAH",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "Cordova",
+    serial: "ALQURAN001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 69500,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Al-Quran",
+    barcode: "ALQURAN001BC",
+  },
+  {
+    id: "2024/01/ELK-0177",
+    name: "Trainer IoT MC KIT ESP-32",
+    type: "ELK",
+    typeName: "Elektronik Umum", // Diubah
+    brand: "monsterchip",
+    serial: "TRNIOTMCKIT001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 490000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Trainer+IoT+MC+KIT+ESP-32",
+    barcode: "TRNIOTMCKIT001BC",
+  },
+  {
+    id: "2024/01/KOM-0012", // Diubah dari ELK
+    name: "Port USB",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "Vention",
+    serial: "PORTUSB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 60000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Port+USB",
+    barcode: "PORTUSB001BC",
+  },
+  {
+    id: "2024/01/JAR-0020", // Diubah dari ELK
+    name: "FTTH TOOL Handheld Optical Power Meter JW3208 Manual",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "Joinwit",
+    serial: "FTTHTOOLJW3208001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 690000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=FTTH+Tool+Optical+Power+Meter",
+    barcode: "FTTHTOOLJW3208001BC",
+  },
+  {
+    id: "2024/01/KOM-0013", // Diubah dari ELK
+    name: "Motherboard",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "ASRock",
+    serial: "MBASROCK001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Motherboard",
+    barcode: "MBASROCK001BC",
+  },
+  {
+    id: "2024/01/LAN-0005",
+    name: "Vacuum Cleaner",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "",
+    serial: "VC001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 0, // Harga tidak tersedia di CSV
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Vacuum+Cleaner",
+    barcode: "VC001BC",
+  },
+  {
+    id: "2024/01/KOM-0014", // Diubah dari ELK
+    name: "Cooling Fan",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "CLGFAN001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 27000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Cooling+Fan",
+    barcode: "CLGFAN001BC",
+  },
+  {
+    id: "2024/01/JAR-0021", // Diubah dari ELK
+    name: "Router AX1500 NextGen",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "tp-link",
+    serial: "RTRTPAX1500001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 520000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Router+AX1500",
+    barcode: "RTRTPAX1500001BC",
+  },
+  {
+    id: "2024/01/JAR-0022", // Diubah dari ELK
+    name: "Fiber Optic 50 meter",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "",
+    serial: "FO50M001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 60000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Fiber+Optic+50m",
+    barcode: "FO50M001BC",
+  },
+  {
+    id: "2024/01/JAR-0023", // Diubah dari ELK
+    name: "Router A10WR4EB",
+    type: "JAR",
+    typeName: "Jaringan",
+    brand: "HONOR",
+    serial: "RTRHONORA10WR4EB001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 760000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Router+Honor",
+    barcode: "RTRHONORA10WR4EB001BC",
+  },
+  {
+    id: "2024/01/KOM-0015", // Diubah dari ELK
+    name: "Cooling Fan DC825BJ DC 12V 0.25A",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "CLGFANDC825BJ001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 25000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Cooling+Fan+DC825BJ",
+    barcode: "CLGFANDC825BJ001BC",
+  },
+  {
+    id: "2024/01/KOM-0016", // Diubah dari ELK
+    name: "Power Supply SB-380W (DN)",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "PSUSB380W001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 155000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Power+Supply+SB-380W",
+    barcode: "PSUSB380W001BC",
+  },
+  {
+    id: "2024/01/LAN-0006",
+    name: "Taplak Mouse",
+    type: "LAN",
+    typeName: "Lainnya",
+    brand: "",
+    serial: "TPLKMS001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 7000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Taplak+Mouse",
+    barcode: "TPLKMS001BC",
+  },
+  {
+    id: "2024/01/ATK-0011",
+    name: "Obeng Set Multifungsi 16 in 1",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "XinRui",
+    serial: "OBSM16IN1001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 57000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Obeng+Set+Multifungsi",
+    barcode: "OBSM16IN1001BC",
+  },
+  {
+    id: "2024/01/ATK-0012",
+    name: "iFixit Pro Tech Toolkit - Repair Kit, original USA",
+    type: "ATK",
+    typeName: "Alat & Perkakas", // Diubah
+    brand: "iFixit",
+    serial: "IFIXITPRO001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 2119000,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=iFixit+Pro+Tech+Toolkit",
+    barcode: "IFIXITPRO001BC",
+  },
+  {
+    id: "2024/01/KOM-0017", // Diubah dari ELK
+    name: "Kabel Power CPU",
+    type: "KOM",
+    typeName: "Komputer & Periferal",
+    brand: "",
+    serial: "KBLCPU001",
+    location: "",
+    condition: "Baik",
+    status: "Tersedia",
+    price: 8200,
+    purchaseDate: "2024-01-01",
+    dateAdded: "2024-01-01",
+    image:
+      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Kabel+Power+CPU",
+    barcode: "KBLCPU001BC",
+  },
 ];
 
 let borrowings = [
@@ -61,7 +3530,7 @@ let borrowings = [
     returnDate: "2024-01-25",
     actualReturnDate: null,
     status: "Aktif",
-    purpose: "Presentasi di aula",
+    purpose: "Presentasi di Laboratorium",
   },
   {
     id: "BRW-002",
@@ -142,7 +3611,7 @@ let users = [
 let requests = [
   {
     id: "REQ-001",
-    requester: "Dr. Siti Nurhaliza",
+    requester: "Angela Cristy",
     asset: "Komputer Desktop",
     type: "ELK",
     quantity: 5,
@@ -152,7 +3621,7 @@ let requests = [
   },
   {
     id: "REQ-002",
-    requester: "Ir. Joko Widodo",
+    requester: "Budi Darsono",
     asset: "Printer Laser",
     type: "ELK",
     quantity: 2,
@@ -425,7 +3894,7 @@ function enhancedLogin(event) {
     {
       username: "kaprodi",
       password: "kaprodi123",
-      name: "Dr. Kaprodi",
+      name: "Bima Azis Kusuma, S.T., M.T.",
       level: "Kaprodi",
       avatar: "assets/kaprodi.png",
     },
@@ -439,7 +3908,7 @@ function enhancedLogin(event) {
     {
       username: "rektor",
       password: "rektor123",
-      name: "Dr. Rektor",
+      name: "Muhammad Sugiarto, S.E., M.M.",
       level: "Rektor",
       avatar: "assets/rektor.png",
     },
@@ -555,6 +4024,16 @@ function showPage(pageId) {
     }, 500);
   }
 
+  // Setup horizontal scroll for the new page after a short delay
+  setTimeout(() => {
+    setupHorizontalScroll();
+    // Show scroll hint for the new page
+    showHorizontalScrollHint();
+  }, 500);
+
+  // Update footer stats when changing pages
+  setTimeout(updateFooterStats, 100);
+
   // Update active nav link
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
@@ -631,33 +4110,6 @@ function showPage(pageId) {
   }*/
 }
 
-function setupHorizontalScroll() {
-  const contentArea = document.querySelector(".content-area");
-
-  if (!contentArea) return;
-
-  contentArea.addEventListener(
-    "wheel",
-    function (e) {
-      // Check if Shift key is pressed
-      if (e.shiftKey) {
-        // Prevent vertical scrolling
-        e.preventDefault();
-
-        // Scroll horizontally based on wheel direction
-        if (e.deltaY > 0) {
-          // Scroll right
-          this.scrollLeft += 50;
-        } else {
-          // Scroll left
-          this.scrollLeft -= 50;
-        }
-      }
-    },
-    { passive: false }
-  );
-}
-
 // Improved Sidebar Toggle Function
 function toggleSidebar() {
   const sidebar = document.getElementById("sidebar");
@@ -701,27 +4153,16 @@ function toggleSidebar() {
     "margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1)"; */
 }
 
-// Fungsi untuk menutup sidebar ketika overlay diklik
 function setupOverlayClick() {
   const overlay = document.getElementById("overlay");
   const sidebar = document.getElementById("sidebar");
-  const menuToggle = document.getElementById("menuToggle");
-
-  if (!overlay || !sidebar || !menuToggle) return;
+  if (!overlay || !sidebar) return;
 
   overlay.addEventListener("click", function () {
     if (sidebar.classList.contains("active")) {
       sidebar.classList.remove("active");
       overlay.classList.remove("active");
-
-      // Kembalikan icon menu ke hamburger
-      menuToggle.innerHTML = `
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      `;
+      updateMenuToggleIcon(false);
     }
   });
 }
@@ -753,6 +4194,35 @@ function setupMenuItemsClick() {
       }
     });
   });
+}
+
+function handleResize() {
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
+  if (!sidebar || !mainContent) return;
+
+  const newIsDesktop = window.innerWidth >= 1024;
+
+  // Hanya jalankan jika ada perubahan mode (desktop ke mobile atau sebaliknya)
+  if (newIsDesktop !== isDesktop) {
+    isDesktop = newIsDesktop; // Perbarui variabel global
+
+    if (isDesktop) {
+      // Jika beralih ke tampilan desktop
+      sidebar.classList.add("collapsed");
+      mainContent.classList.add("sidebar-collapsed");
+      sidebar.classList.remove("active"); // Hapus kelas 'active' dari mode mobile
+    } else {
+      // Jika beralih ke tampilan mobile
+      sidebar.classList.remove("collapsed", "active");
+      mainContent.classList.remove("sidebar-collapsed");
+    }
+  }
+}
+
+// Letakkan fungsi initializeSidebar() Anda di bawah sini...
+function initializeSidebar() {
+  // ...isi fungsi Anda yang sudah ada
 }
 
 // Enhanced sidebar initialization
@@ -816,6 +4286,56 @@ function initializeSidebar() {
       toggleSidebar();
     }
   });
+
+  // Hide hint when user starts interacting
+  document.addEventListener("keydown", (event) => {
+    if (event.shiftKey) {
+      const hintElement = document.getElementById("horizontalScrollHint");
+      if (hintElement) {
+        hintElement.classList.remove("show");
+      }
+    }
+  });
+
+  document.addEventListener(
+    "wheel",
+    (event) => {
+      if (event.shiftKey) {
+        const hintElement = document.getElementById("horizontalScrollHint");
+        if (hintElement) {
+          hintElement.classList.remove("show");
+        }
+      }
+    },
+    { passive: true }
+  );
+}
+
+// [TAMBAHKAN fungsi untuk memeriksa tabel individual]
+function setupTableScrollHints() {
+  const tables = document.querySelectorAll(".data-table");
+
+  tables.forEach((table) => {
+    if (table.scrollWidth > table.clientWidth) {
+      const tableContainer = table.closest(".data-table-container");
+      if (tableContainer) {
+        // Add a small indicator near the table
+        const existingHint = tableContainer.querySelector(".table-scroll-hint");
+        if (!existingHint) {
+          const tableHint = document.createElement("div");
+          tableHint.className = "table-scroll-hint";
+          tableHint.innerHTML = "↔️ Geser untuk melihat lebih banyak";
+          tableContainer.appendChild(tableHint);
+
+          // Auto-hide table hint
+          setTimeout(() => {
+            tableHint.style.opacity = "0";
+            setTimeout(() => tableHint.remove(), 300);
+          }, 3000);
+        }
+      }
+    }
+  });
 }
 
 // Enhanced toggle function for desktop collapse mode
@@ -854,12 +4374,11 @@ function toggleSidebarCollapse() {
   }
 }
 
-// Update the main toggleSidebar function to handle both mobile and desktop
 function toggleSidebar() {
-  if (isDesktop) {
-    toggleDesktopSidebar();
-  } else {
+  if (window.innerWidth < 1024) {
     toggleMobileSidebar();
+  } else {
+    toggleDesktopSidebar();
   }
 }
 
@@ -886,21 +4405,18 @@ function toggleDesktopSidebar() {
 
 function toggleMobileSidebar() {
   const sidebar = document.getElementById("sidebar");
-  const mainContent = document.getElementById("mainContent");
-
-  if (!sidebar || !mainContent) return;
+  const overlay = document.getElementById("overlay");
+  if (!sidebar || !overlay) return;
 
   const isActive = sidebar.classList.contains("active");
-
   if (isActive) {
-    // Hide sidebar
     sidebar.classList.remove("active");
-    updateMenuToggleIcon(false);
+    overlay.classList.remove("active");
   } else {
-    // Show sidebar
     sidebar.classList.add("active");
-    updateMenuToggleIcon(true);
+    overlay.classList.add("active");
   }
+  updateMenuToggleIcon(isActive);
 }
 
 // Fungsi baru untuk mengupdate icon menu toggle
@@ -1015,6 +4531,9 @@ function initAssetChart() {
               usePointStyle: true,
               font: {
                 size: 12,
+                color: getComputedStyle(document.body).getPropertyValue(
+                  "--text-primary"
+                ), // Dynamic color
               },
             },
           },
@@ -1024,6 +4543,9 @@ function initAssetChart() {
             font: {
               size: 16,
               weight: "bold",
+              color: getComputedStyle(document.body).getPropertyValue(
+                "--text-primary"
+              ), // Dynamic color
             },
             padding: {
               top: 10,
@@ -1084,6 +4606,13 @@ function updateAssetChart() {
     borrowedAssets,
     maintenanceAssets,
   ];
+
+  // Update legend and title colors for dark mode
+  window.assetChartInstance.options.plugins.legend.labels.color =
+    getComputedStyle(document.body).getPropertyValue("--text-primary");
+  window.assetChartInstance.options.plugins.title.font.color = getComputedStyle(
+    document.body
+  ).getPropertyValue("--text-primary");
 
   // Refresh chart
   window.assetChartInstance.update("active");
@@ -1270,18 +4799,20 @@ function addDataTableStyles() {
         border: 1px solid var(--border-color);
         border-radius: 6px;
         padding: 0.375rem 0.75rem;
-        background-color: var(--bg-white);
+        background-color: var(--card-bg); /* Changed to card-bg */
         color: var(--text-primary);
         margin: 0 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
       }
       
       .dataTables_filter input {
         border: 1px solid var(--border-color);
         border-radius: 6px;
         padding: 0.375rem 0.75rem;
-        background-color: var(--bg-white);
+        background-color: var(--card-bg); /* Changed to card-bg */
         color: var(--text-primary);
         margin-left: 0.5rem;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
       }
       
       .dataTables_filter input:focus {
@@ -1294,6 +4825,7 @@ function addDataTableStyles() {
         color: var(--text-secondary);
         font-size: 0.875rem;
         margin-top: 1rem;
+        transition: color 0.3s ease;
       }
       
       .dataTables_paginate {
@@ -1304,16 +4836,16 @@ function addDataTableStyles() {
         padding: 0.375rem 0.75rem;
         margin: 0 0.125rem;
         border: 1px solid var(--border-color);
-        background-color: var(--bg-white);
+        background-color: var(--card-bg); /* Changed to card-bg */
         color: var(--text-primary);
         border-radius: 6px;
         text-decoration: none;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: all 0.2s ease, background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
       }
       
       .dataTables_paginate .paginate_button:hover {
-        background-color: var(--bg-secondary);
+        background-color: var(--light-bg); /* Changed to light-bg */
         border-color: var(--primary-color);
         color: var(--primary-color);
       }
@@ -1356,11 +4888,13 @@ function addDataTableStyles() {
         margin-top: -26px;
         text-align: center;
         padding: 1rem;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: var(--card-bg); /* Changed to card-bg */
         border: 1px solid var(--border-color);
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 1001;
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
       }
     `;
     document.head.appendChild(style);
@@ -2669,7 +6203,7 @@ function exportToPDF() {
             finalY
           );
 
-          // Signature line (same width as generateReport - 200px ≈ 50mm)
+          // Signature line (same width as generateReport - 200px â‰ˆ 50mm)
           doc.setDrawColor(0, 0, 0);
           doc.setLineWidth(0.4);
           const lineY = finalY + 23;
@@ -3232,23 +6766,16 @@ function createFinancialReport(table) {
   table.appendChild(tbody);
 }
 
-// Search Functionality
 function setupSearchFunctionality() {
   const assetSearch = document.getElementById("assetSearch");
   if (assetSearch) {
-    // Clear previous event listeners to avoid duplicates
-    assetSearch.removeEventListener("input", handleAssetSearch);
-    // Add new event listener
-    assetSearch.addEventListener("input", handleAssetSearch);
-
-    // Add debounce function to improve performance
     let searchTimeout;
-    function handleAssetSearch() {
+    assetSearch.addEventListener("input", () => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         searchAssets();
-      }, 300); // 300ms delay
-    }
+      }, 300);
+    });
   }
 }
 
@@ -3295,7 +6822,7 @@ function displayFilteredAssets(filteredAssets) {
     tableBody.innerHTML = `
             <tr>
                 <td colspan="9" style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔍</div>
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">ðŸ”</div>
                     <p>Tidak ada aset yang ditemukan</p>
                     <p style="font-size: 0.875rem;">Coba dengan kata kunci lain atau periksa ejaan</p>
                 </td>
@@ -3437,6 +6964,258 @@ function clearSearch() {
   }
 }
 
+// Dark Mode Functions
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+
+  const isDarkMode = body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", isDarkMode);
+
+  updateDarkModeToggleIcon(isDarkMode);
+  updateAssetChart(); // Update chart colors when dark mode changes
+}
+
+function updateDarkModeToggleIcon(isDarkMode) {
+  const iconElement = document.getElementById("darkModeToggleIcon");
+  if (iconElement) {
+    iconElement.textContent = isDarkMode ? "☀️" : "🌙";
+  }
+}
+
+function applySavedDarkModePreference() {
+  const savedPreference = localStorage.getItem("darkMode");
+  if (savedPreference === "true") {
+    document.body.classList.add("dark-mode");
+    updateDarkModeToggleIcon(true);
+  } else {
+    updateDarkModeToggleIcon(false);
+  }
+}
+
+// [MODIFIKASI FINAL setupHorizontalScroll]
+function setupHorizontalScroll() {
+  // Apply to main content area
+  const mainContent = document.getElementById("mainContent");
+  if (mainContent) {
+    mainContent.addEventListener("wheel", handleHorizontalScroll);
+  }
+
+  // Apply to all tables and scrollable containers
+  const scrollableContainers = document.querySelectorAll(
+    ".table-wrapper, .data-table-container, .content-area, .report-container, .modal-content"
+  );
+  scrollableContainers.forEach((container) => {
+    container.addEventListener("wheel", handleHorizontalScroll);
+  });
+
+  // Setup scroll hint system
+  setupScrollHint();
+
+  // Setup table-specific hints
+  setTimeout(setupTableScrollHints, 1000);
+}
+// Generic horizontal scroll handler
+function handleHorizontalScroll(event) {
+  if (event.shiftKey) {
+    event.preventDefault();
+    this.scrollLeft += event.deltaY;
+  }
+}
+
+// Function to show horizontal scroll hint
+function showHorizontalScrollHint() {
+  // Check if there are any horizontally scrollable elements
+  const scrollableElements = document.querySelectorAll(
+    ".content-area, .table-wrapper, .data-table-container, .modal-content, .report-container"
+  );
+  let hasHorizontalScroll = false;
+
+  scrollableElements.forEach((element) => {
+    if (element.scrollWidth > element.clientWidth) {
+      hasHorizontalScroll = true;
+    }
+  });
+
+  // Create or update hint element
+  let hintElement = document.getElementById("horizontalScrollHint");
+  if (!hintElement) {
+    hintElement = document.createElement("div");
+    hintElement.id = "horizontalScrollHint";
+    hintElement.className = "scroll-hint";
+    hintElement.innerHTML =
+      "🔍 Gunakan <strong>Shift + Scroll mouse</strong> untuk melihat konten lebih lengkap";
+    document.body.appendChild(hintElement);
+  }
+
+  // Show or hide based on scrollability
+  if (hasHorizontalScroll) {
+    hintElement.classList.add("show");
+
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      hintElement.classList.remove("show");
+    }, 5000);
+  } else {
+    hintElement.classList.remove("show");
+  }
+}
+
+// Function to check and show hint on page load and resize
+function setupScrollHint() {
+  // Show hint on page load
+  setTimeout(showHorizontalScrollHint, 1000);
+
+  // Show hint on window resize
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(showHorizontalScrollHint, 500);
+  });
+
+  // Show hint when scrolling starts (optional)
+  document.addEventListener(
+    "wheel",
+    (event) => {
+      if (event.shiftKey) {
+        const hintElement = document.getElementById("horizontalScrollHint");
+        if (hintElement) {
+          hintElement.classList.remove("show");
+        }
+      }
+    },
+    { passive: true }
+  );
+}
+
+// Global event listener for dynamically created elements
+document.addEventListener(
+  "wheel",
+  function (event) {
+    if (event.shiftKey) {
+      // Find the nearest scrollable parent
+      let target = event.target;
+      let scrollableElement = null;
+
+      while (target && target !== document.body) {
+        if (
+          target.scrollWidth > target.clientWidth &&
+          getComputedStyle(target).overflowX !== "hidden"
+        ) {
+          scrollableElement = target;
+          break;
+        }
+        target = target.parentElement;
+      }
+
+      // If we found a scrollable element, scroll it horizontally
+      if (scrollableElement) {
+        event.preventDefault();
+        scrollableElement.scrollLeft += event.deltaY;
+      }
+    }
+  },
+  { passive: false }
+);
+
+// Function to update footer statistics
+function updateFooterStats() {
+  // Update asset count
+  const assetCount = assets.length;
+  const assetCountElement = document.getElementById("footerAssetCount");
+  if (assetCountElement) {
+    assetCountElement.textContent = assetCount.toLocaleString();
+  }
+
+  // Update user count
+  const userCount = users.length;
+  const userCountElement = document.getElementById("footerUserCount");
+  if (userCountElement) {
+    userCountElement.textContent = userCount.toLocaleString();
+  }
+
+  // Update user status
+  const userStatusElement = document.getElementById("footerUserStatus");
+  if (userStatusElement && currentUser) {
+    userStatusElement.textContent = currentUserLevel;
+  }
+}
+
+// Function to update server time
+function updateServerTime() {
+  const timeElement = document.getElementById("footerServerTime");
+  if (timeElement) {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString("id-ID", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    });
+    const dateString = now.toLocaleDateString("id-ID", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+
+    timeElement.textContent = `${timeString} • ${dateString}`;
+  }
+}
+
+// Function to scroll to top
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
+// Function to initialize footer
+function initializeFooter() {
+  // Update stats initially
+  updateFooterStats();
+  updateServerTime();
+
+  // Update time every second
+  setInterval(updateServerTime, 1000);
+
+  // Update stats when data changes
+  const originalFunctions = {
+    loadAssetsTable: window.loadAssetsTable,
+    loadUsersTable: window.loadUsersTable,
+  };
+
+  // Override functions to update footer stats
+  window.loadAssetsTable = function () {
+    originalFunctions.loadAssetsTable();
+    updateFooterStats();
+  };
+
+  window.loadUsersTable = function () {
+    originalFunctions.loadUsersTable();
+    updateFooterStats();
+  };
+}
+
+// Function to handle responsive footer margin
+function updateFooterMargin() {
+  const footer = document.querySelector(".footer");
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
+
+  if (footer && sidebar && mainContent) {
+    if (window.innerWidth >= 1024) {
+      if (sidebar.classList.contains("collapsed")) {
+        footer.style.marginLeft = "80px";
+      } else {
+        footer.style.marginLeft = "280px";
+      }
+    } else {
+      footer.style.marginLeft = "0";
+    }
+  }
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function () {
   // Add CSS animation for spin loading
@@ -3451,6 +7230,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     `;
   document.head.appendChild(style);
+
+  // Apply saved dark mode preference on load
+  applySavedDarkModePreference();
 
   // Login form
   const loginForm = document.getElementById("loginForm");
@@ -3561,6 +7343,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Setup horizontal scroll
   setupHorizontalScroll();
 
+  initializeFooter();
+
+  // Update footer margin on resize and sidebar toggle
+  window.addEventListener("resize", updateFooterMargin);
+
+  // Override sidebar toggle to update footer margin
+  const originalToggleSidebar = window.toggleSidebar;
+  window.toggleSidebar = function () {
+    originalToggleSidebar();
+    setTimeout(updateFooterMargin, 300);
+  };
+
   // Asset search
   const assetSearch = document.getElementById("assetSearch");
   if (assetSearch) {
@@ -3632,6 +7426,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("- Structured asset ID format");
   console.log("- Advanced reporting with PDF/Excel export");
   console.log("- Dynamic library loading for PDF/Excel");
+  console.log("- Dark Mode Toggle");
   console.log("Keyboard shortcuts:");
   console.log("- Ctrl+1: Dashboard");
   console.log("- Ctrl+2: Assets");

@@ -1,4 +1,4 @@
-// Global Variables
+// Global Variables (tetap sama)
 let assets = [
   {
     id: "2024/01/KOM-0001", // Diubah dari ELK
@@ -62,7 +62,7 @@ let assets = [
     price: 10000000,
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Deskbook",
+    image: "assets/deskbook.jpg",
     barcode: "DBHP001BC",
   },
   {
@@ -78,7 +78,7 @@ let assets = [
     price: 125000,
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Keyboard",
+    image: "assets/keyboard.png",
     barcode: "KB001BC",
   },
   {
@@ -94,7 +94,7 @@ let assets = [
     price: 70000,
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Mouse",
+    image: "assets/mouse.jpg",
     barcode: "MS001BC",
   },
   {
@@ -110,8 +110,7 @@ let assets = [
     price: 780000,
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image:
-      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Monitor+DELL",
+    image: "assets/monitor-dell.png",
     barcode: "MNDELL001BC",
   },
   {
@@ -127,7 +126,7 @@ let assets = [
     price: 3000000,
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image: "https://via.placeholder.com/400x300/e2e8f0/64748b?text=PC+Rakitan",
+    image: "assets/pc-rakitan.jpg",
     barcode: "PCRAK001BC",
   },
   {
@@ -143,8 +142,7 @@ let assets = [
     price: 0, // Harga tidak tersedia di CSV
     purchaseDate: "2024-01-01",
     dateAdded: "2024-01-01",
-    image:
-      "https://via.placeholder.com/400x300/e2e8f0/64748b?text=Headphones+JETE",
+    image: "assets/headphones-jete.jpg",
     barcode: "HPJETE001BC",
   },
   {
@@ -3519,6 +3517,703 @@ let assets = [
   },
 ];
 
+// Struktur data untuk entitas barcode data aset
+let barcodeData = [
+  {
+    id_barcode: "BCD-001",
+    aset_terhubung: "2024/01/KOM-0001",
+    isi_barcode: "HP123456789",
+    tanggal_dibuat: "2024-01-15",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-002",
+    aset_terhubung: "2024/01/KOM-0002",
+    isi_barcode: "EP789012345",
+    tanggal_dibuat: "2024-01-16",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-003",
+    aset_terhubung: "2024/01/FUR-0001",
+    isi_barcode: "OL345678901",
+    tanggal_dibuat: "2024-01-10",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-004",
+    aset_terhubung: "2024/01/KOM-0003",
+    isi_barcode: "DBHP001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-005",
+    aset_terhubung: "2024/01/KOM-0004",
+    isi_barcode: "KB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-006",
+    aset_terhubung: "2024/01/KOM-0005",
+    isi_barcode: "MS001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-007",
+    aset_terhubung: "2024/01/KOM-0006",
+    isi_barcode: "MNDELL001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-008",
+    aset_terhubung: "2024/01/KOM-0007",
+    isi_barcode: "PCRAK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-009",
+    aset_terhubung: "2024/01/KOM-0008",
+    isi_barcode: "HPJETE001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-010",
+    aset_terhubung: "2024/01/JAR-0001",
+    isi_barcode: "SPLCR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-011",
+    aset_terhubung: "2024/01/JAR-0002",
+    isi_barcode: "FO250M001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-012",
+    aset_terhubung: "2024/01/JAR-0003",
+    isi_barcode: "SWTPLINK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-013",
+    aset_terhubung: "2024/01/JAR-0004",
+    isi_barcode: "HTB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-014",
+    aset_terhubung: "2024/01/FUR-0002",
+    isi_barcode: "RAKRAKO001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-015",
+    aset_terhubung: "2024/01/ATK-0001",
+    isi_barcode: "CRIMPSCH001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-016",
+    aset_terhubung: "2024/01/ATK-0002",
+    isi_barcode: "CRIMPTREND001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-017",
+    aset_terhubung: "2024/01/ATK-0003",
+    isi_barcode: "CRIMPHT315001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-018",
+    aset_terhubung: "2024/01/ATK-0004",
+    isi_barcode: "CRIMPVENT001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-019",
+    aset_terhubung: "2024/01/JAR-0005",
+    isi_barcode: "SWMK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-020",
+    aset_terhubung: "2024/01/JAR-0006",
+    isi_barcode: "RBMK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-021",
+    aset_terhubung: "2024/01/JAR-0007",
+    isi_barcode: "RBMKHEX001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-022",
+    aset_terhubung: "2024/01/JAR-0008",
+    isi_barcode: "SWTPLINKLS001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-023",
+    aset_terhubung: "2024/01/JAR-0009",
+    isi_barcode: "OTDRJW001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-024",
+    aset_terhubung: "2024/01/JAR-0010",
+    isi_barcode: "RTRCISCO1900001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-025",
+    aset_terhubung: "2024/01/JAR-0011",
+    isi_barcode: "RTRCISCO2900001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-026",
+    aset_terhubung: "2024/01/JAR-0012",
+    isi_barcode: "SWHUBCISCO001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-027",
+    aset_terhubung: "2024/01/LAN-0001",
+    isi_barcode: "CBH001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-028",
+    aset_terhubung: "2024/01/LAN-0002",
+    isi_barcode: "CBB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-029",
+    aset_terhubung: "2024/01/ATK-0005",
+    isi_barcode: "TBKM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-030",
+    aset_terhubung: "2024/01/KOM-0009",
+    isi_barcode: "RAMKNG001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-031",
+    aset_terhubung: "2024/01/KOM-0010",
+    isi_barcode: "RAM4GB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-032",
+    aset_terhubung: "2024/01/ATK-0006",
+    isi_barcode: "CRIMPINGLG001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-033",
+    aset_terhubung: "2024/01/LAN-0003",
+    isi_barcode: "TRIPOD001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-034",
+    aset_terhubung: "2024/01/FUR-0003",
+    isi_barcode: "KRSI001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-035",
+    aset_terhubung: "2024/01/FUR-0004",
+    isi_barcode: "MEJA001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-036",
+    aset_terhubung: "2024/01/FUR-0005",
+    isi_barcode: "PAPTUL001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-037",
+    aset_terhubung: "2024/01/JAR-0013",
+    isi_barcode: "KBLAN001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-038",
+    aset_terhubung: "2024/01/KOM-0011",
+    isi_barcode: "KBVGA001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-039",
+    aset_terhubung: "2024/01/ELK-0025",
+    isi_barcode: "SNSRLDR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-040",
+    aset_terhubung: "2024/01/ELK-0026",
+    isi_barcode: "LEDH001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-041",
+    aset_terhubung: "2024/01/ELK-0027",
+    isi_barcode: "LEDM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-042",
+    aset_terhubung: "2024/01/ELK-0028",
+    isi_barcode: "LEDK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-043",
+    aset_terhubung: "2024/01/ELK-0029",
+    isi_barcode: "SNSRIR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-044",
+    aset_terhubung: "2024/01/ELK-0030",
+    isi_barcode: "PBK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-045",
+    aset_terhubung: "2024/01/ELK-0031",
+    isi_barcode: "MPB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-046",
+    aset_terhubung: "2024/01/ELK-0032",
+    isi_barcode: "RESISTOR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-047",
+    aset_terhubung: "2024/01/ELK-0033",
+    isi_barcode: "KAP220001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-048",
+    aset_terhubung: "2024/01/ELK-0034",
+    isi_barcode: "KAP100001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-049",
+    aset_terhubung: "2024/01/ELK-0035",
+    isi_barcode: "SNSRHUM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-050",
+    aset_terhubung: "2024/01/ELK-0036",
+    isi_barcode: "MSNHUM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-051",
+    aset_terhubung: "2024/01/ELK-0037",
+    isi_barcode: "THWNM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-052",
+    aset_terhubung: "2024/01/ELK-0038",
+    isi_barcode: "SNSRVIB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-053",
+    aset_terhubung: "2024/01/ELK-0039",
+    isi_barcode: "SNSRHRT001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-054",
+    aset_terhubung: "2024/01/ELK-0040",
+    isi_barcode: "MRGBLED001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-055",
+    aset_terhubung: "2024/01/ELK-0041",
+    isi_barcode: "MPSUCB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-056",
+    aset_terhubung: "2024/01/ELK-0042",
+    isi_barcode: "CSNSRTCS001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-057",
+    aset_terhubung: "2024/01/ELK-0043",
+    isi_barcode: "SD12TO5V001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-058",
+    aset_terhubung: "2024/01/ELK-0044",
+    isi_barcode: "RGBLED4C001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-059",
+    aset_terhubung: "2024/01/ELK-0045",
+    isi_barcode: "RGBLED2C001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-060",
+    aset_terhubung: "2024/01/ELK-0046",
+    isi_barcode: "PSVBZR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-061",
+    aset_terhubung: "2024/01/ELK-0047",
+    isi_barcode: "BZRAC001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-062",
+    aset_terhubung: "2024/01/ELK-0048",
+    isi_barcode: "SNSRTMPLM35001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-063",
+    aset_terhubung: "2024/01/ELK-0049",
+    isi_barcode: "DHT22SNSR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-064",
+    aset_terhubung: "2024/01/ELK-0050",
+    isi_barcode: "OLEDLCD001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-065",
+    aset_terhubung: "2024/01/ELK-0051",
+    isi_barcode: "SNSHALL001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-066",
+    aset_terhubung: "2024/01/ELK-0052",
+    isi_barcode: "SNSSUARA001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-067",
+    aset_terhubung: "2024/01/ELK-0053",
+    isi_barcode: "POTENSIO001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-068",
+    aset_terhubung: "2024/01/ELK-0054",
+    isi_barcode: "MODRTC001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-069",
+    aset_terhubung: "2024/01/ELK-0055",
+    isi_barcode: "WTRSNS001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-070",
+    aset_terhubung: "2024/01/ELK-0056",
+    isi_barcode: "DRVMTR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-071",
+    aset_terhubung: "2024/01/ELK-0057",
+    isi_barcode: "LEDMTX001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-072",
+    aset_terhubung: "2024/01/ELK-0058",
+    isi_barcode: "BTCNCTR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-073",
+    aset_terhubung: "2024/01/ELK-0059",
+    isi_barcode: "PHM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-074",
+    aset_terhubung: "2024/01/ELK-0060",
+    isi_barcode: "PUSHBUTTON001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-075",
+    aset_terhubung: "2024/01/JAR-0014",
+    isi_barcode: "CBLTSTR001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-076",
+    aset_terhubung: "2024/01/JAR-0015",
+    isi_barcode: "RJ45DF5E001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-077",
+    aset_terhubung: "2024/01/JAR-0016",
+    isi_barcode: "RJ45AMP6001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-078",
+    aset_terhubung: "2024/01/ATK-0008",
+    isi_barcode: "JWTOOLKIT001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-079",
+    aset_terhubung: "2024/01/ELK-0173",
+    isi_barcode: "BTALK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-080",
+    aset_terhubung: "2024/01/JAR-0017",
+    isi_barcode: "CNCTFO001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-081",
+    aset_terhubung: "2024/01/ATK-0010",
+    isi_barcode: "CTH001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-082",
+    aset_terhubung: "2024/01/JAR-0018",
+    isi_barcode: "KNKTRVENTABU001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-083",
+    aset_terhubung: "2024/01/JAR-0019",
+    isi_barcode: "KNKTRVENTHITAM001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-084",
+    aset_terhubung: "2024/01/LAN-0004",
+    isi_barcode: "ALQURAN001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-085",
+    aset_terhubung: "2024/01/ELK-0177",
+    isi_barcode: "TRNIOTMCKIT001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-086",
+    aset_terhubung: "2024/01/KOM-0012",
+    isi_barcode: "PORTUSB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-087",
+    aset_terhubung: "2024/01/JAR-0020",
+    isi_barcode: "FTTHTOOLJW3208001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-088",
+    aset_terhubung: "2024/01/KOM-0013",
+    isi_barcode: "MBASROCK001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-089",
+    aset_terhubung: "2024/01/LAN-0005",
+    isi_barcode: "VC001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-090",
+    aset_terhubung: "2024/01/KOM-0014",
+    isi_barcode: "CLGFAN001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-091",
+    aset_terhubung: "2024/01/JAR-0021",
+    isi_barcode: "RTRTPAX1500001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-092",
+    aset_terhubung: "2024/01/JAR-0022",
+    isi_barcode: "FO50M001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-093",
+    aset_terhubung: "2024/01/JAR-0023",
+    isi_barcode: "RTRHONORA10WR4EB001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-094",
+    aset_terhubung: "2024/01/KOM-0015",
+    isi_barcode: "CLGFANDC825BJ001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-095",
+    aset_terhubung: "2024/01/KOM-0016",
+    isi_barcode: "PSUSB380W001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-096",
+    aset_terhubung: "2024/01/LAN-0006",
+    isi_barcode: "TPLKMS001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-097",
+    aset_terhubung: "2024/01/ATK-0011",
+    isi_barcode: "OBSM16IN1001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-098",
+    aset_terhubung: "2024/01/ATK-0012",
+    isi_barcode: "IFIXITPRO001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+  {
+    id_barcode: "BCD-099",
+    aset_terhubung: "2024/01/KOM-0017",
+    isi_barcode: "KBLCPU001BC",
+    tanggal_dibuat: "2024-01-01",
+    status: "Aktif",
+  },
+];
+
 let borrowings = [
   {
     id: "BRW-001",
@@ -3632,6 +4327,7 @@ let requests = [
 ];
 
 // User permissions
+
 const userPermissions = {
   Admin: [
     "dashboard",
@@ -3641,8 +4337,16 @@ const userPermissions = {
     "users",
     "requests",
     "reports",
+    "barcode",
   ],
-  Sarpras: ["dashboard", "assets", "borrowing", "maintenance", "reports"],
+  Sarpras: [
+    "dashboard",
+    "assets",
+    "borrowing",
+    "maintenance",
+    "reports",
+    "barcode",
+  ],
   Rektor: ["dashboard", "reports"],
   Kaprodi: ["dashboard", "requests", "reports"],
   Keuangan: ["dashboard", "requests", "reports"],
@@ -3660,6 +4364,118 @@ let currentUserAvatar = null;
 let currentReportType = null;
 let currentReportData = null;
 let isDesktop = window.innerWidth >= 1024;
+// Variabel untuk tracking scroll
+let lastScrollTop = 0;
+let scrollTimeout = null;
+const headerHeight = 70;
+
+function handleHeaderScroll() {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return; // Exit if the navbar element doesn't exist
+
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Add a shadow effect when the page is scrolled down
+  if (scrollTop > 10) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+
+  // Hide header on scroll down, show on scroll up
+  if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
+    // If scrolling down and past the header's height, add the 'hidden' class
+    navbar.classList.add("hidden");
+  } else {
+    // If scrolling up, remove the 'hidden' class
+    navbar.classList.remove("hidden");
+  }
+
+  // Update the last scroll position
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}
+
+// Fungsi untuk initialize header behavior
+function initStickyHeader() {
+  // Throttle scroll event untuk performance
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleHeaderScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Reset header ketika pindah halaman atau resize
+  window.addEventListener("resize", () => {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+      navbar.style.transform = "translateY(0)";
+      navbar.style.opacity = "1";
+    }
+  });
+}
+
+// Fungsi untuk show header sementara (saat hover)
+function setupHeaderHover() {
+  const navbar = document.querySelector(".navbar");
+  if (!navbar) return;
+
+  navbar.addEventListener("mouseenter", () => {
+    navbar.classList.remove("hidden");
+    navbar.classList.add("visible");
+  });
+
+  navbar.addEventListener("mouseleave", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > 200) {
+      setTimeout(() => {
+        navbar.classList.add("hidden");
+        navbar.classList.remove("visible");
+      }, 1000);
+    }
+  });
+}
+
+// Initialize header scroll behavior
+function initHeaderScroll() {
+  // Throttle scroll event untuk performance
+  let ticking = false;
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleHeaderScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  setupHeaderHover();
+
+  // Show header ketika klik/tap di mana saja
+  document.addEventListener("click", () => {
+    const navbar = document.querySelector(".navbar");
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > 100 && navbar.classList.contains("hidden")) {
+      navbar.classList.remove("hidden");
+      navbar.classList.add("visible");
+
+      // Auto-hide lagi setelah beberapa saat
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        navbar.classList.add("hidden");
+        navbar.classList.remove("visible");
+      }, 3000);
+    }
+  });
+}
 
 // Utility Functions
 function formatCurrency(amount) {
@@ -4069,17 +4885,20 @@ function showPage(pageId) {
       break;
     case "borrowing":
       loadBorrowingTable();
-      loadAvailableAssets();
+      loadAvailableAssets(); // Diperbarui
       break;
     case "maintenance":
       loadMaintenanceTable();
-      loadAssetsForMaintenance();
+      loadAssetsForMaintenance(); // Diperbarui
       break;
     case "users":
       loadUsersTable();
       break;
     case "requests":
       loadRequestsTable();
+      break;
+    case "barcode":
+      loadBarcodeTable();
       break;
   }
 
@@ -4218,11 +5037,6 @@ function handleResize() {
       mainContent.classList.remove("sidebar-collapsed");
     }
   }
-}
-
-// Letakkan fungsi initializeSidebar() Anda di bawah sini...
-function initializeSidebar() {
-  // ...isi fungsi Anda yang sudah ada
 }
 
 // Enhanced sidebar initialization
@@ -4674,7 +5488,7 @@ function initDataTables() {
       { width: "12%", targets: 4 }, // Lokasi
       { width: "10%", targets: 5 }, // Status
       { width: "10%", targets: 6 }, // Kondisi
-      { width: "12%", targets: 7 }, // Harga
+      { width: "10%", targets: 7 }, // Harga
       { width: "12%", targets: 8 }, // Aksi
     ],
     order: [[0, "desc"]], // Sort by ID Aset descending
@@ -5211,11 +6025,355 @@ function viewAssetDetail(id) {
   modal.classList.add("active");
 }
 
-function openBarcodeModal(barcode) {
+// Fungsi untuk membuka modal barcode scanner
+function openBarcodeModal(barcode = null) {
   const modal = document.getElementById("barcodeModal");
   if (modal) {
     modal.classList.add("active");
+
+    // Jika barcode diberikan, tampilkan barcode
+    if (barcode) {
+      displayBarcode(barcode);
+    } else {
+      // Jika tidak, siapkan scanner
+      setupBarcodeScanner();
+    }
   }
+}
+
+// Fungsi untuk menampilkan barcode
+function displayBarcode(barcode) {
+  const barcodeContainer = document.getElementById("barcodeContainer");
+  if (barcodeContainer) {
+    barcodeContainer.innerHTML = `
+      <div style="text-align: center; padding: 1rem;">
+        <h3>Barcode Aset</h3>
+        <div id="barcodeDisplay" style="margin: 1rem 0;"></div>
+        <p><strong>Kode:</strong> ${barcode}</p>
+        <button class="btn btn-primary" onclick="printBarcode('${barcode}')">Cetak Barcode</button>
+        <button class="btn btn-secondary" onclick="setupBarcodeScanner()">Scan Barcode</button>
+      </div>
+    `;
+
+    // Generate barcode visual
+    generateBarcodeVisual(barcode);
+  }
+}
+
+// Fungsi untuk menghasilkan visual barcode
+function generateBarcodeVisual(barcode) {
+  // Menggunakan library JsBarcode jika tersedia
+  if (typeof JsBarcode !== "undefined") {
+    const canvas = document.createElement("canvas");
+    JsBarcode(canvas, barcode, {
+      format: "CODE128",
+      displayValue: true,
+      fontSize: 16,
+      height: 80,
+      width: 2,
+    });
+    document.getElementById("barcodeDisplay").appendChild(canvas);
+  } else {
+    // Fallback jika library tidak tersedia
+    document.getElementById("barcodeDisplay").innerHTML = `
+      <div style="font-family: monospace; font-size: 24px; letter-spacing: 8px; padding: 10px; border: 1px solid #ccc;">
+        ${barcode}
+      </div>
+    `;
+  }
+}
+
+// Fungsi untuk menyiapkan scanner barcode
+function setupBarcodeScanner() {
+  const barcodeContainer = document.getElementById("barcodeContainer");
+  if (barcodeContainer) {
+    barcodeContainer.innerHTML = `
+      <div style="text-align: center; padding: 1rem;">
+        <h3>Scan Barcode</h3>
+        <div id="scannerContainer" style="margin: 1rem 0;">
+          <div style="width: 100%; max-width: 300px; height: 200px; border: 2px dashed var(--border-color); margin: 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+            <span style="color: var(--text-secondary)">Kamera akan diaktifkan</span>
+          </div>
+        </div>
+        <p>Atau masukkan kode barcode secara manual:</p>
+        <input type="text" id="manualBarcodeInput" class="form-control" placeholder="Masukkan kode barcode" style="margin-bottom: 1rem;">
+        <button class="btn btn-primary" onclick="processManualBarcode()">Proses</button>
+      </div>
+    `;
+
+    // Inisialisasi scanner
+    initBarcodeScanner();
+  }
+}
+
+// Fungsi untuk memproses barcode manual
+function processManualBarcode() {
+  const barcodeInput = document.getElementById("manualBarcodeInput");
+  if (barcodeInput && barcodeInput.value) {
+    findAssetByBarcode(barcodeInput.value);
+  } else {
+    showToast("Masukkan kode barcode terlebih dahulu", "error");
+  }
+}
+
+// Fungsi untuk mencari aset berdasarkan barcode
+function findAssetByBarcode(barcode) {
+  const asset = assets.find((a) => a.barcode === barcode);
+  if (asset) {
+    showToast("Aset ditemukan!", "success");
+    closeModal("barcodeModal");
+    viewAssetDetail(asset.id);
+  } else {
+    showToast("Aset tidak ditemukan dengan barcode tersebut", "error");
+  }
+}
+
+// Fungsi untuk mencari aset berdasarkan barcode
+function findAssetByBarcode(barcodeContent) {
+  // Cari di entitas barcodeData terlebih dahulu
+  const barcode = barcodeData.find(
+    (b) => b.isi_barcode === barcodeContent && b.status === "Aktif"
+  );
+
+  if (barcode) {
+    const asset = assets.find((a) => a.id === barcode.aset_terhubung);
+    if (asset) {
+      showToast("Aset ditemukan!", "success");
+      closeModal("barcodeModal");
+      viewAssetDetail(asset.id);
+      return;
+    }
+  }
+
+  // Fallback: cari langsung di assets (untuk kompatibilitas)
+  const asset = assets.find((a) => a.barcode === barcodeContent);
+  if (asset) {
+    showToast("Aset ditemukan!", "success");
+    closeModal("barcodeModal");
+    viewAssetDetail(asset.id);
+  } else {
+    showToast("Aset tidak ditemukan dengan barcode tersebut", "error");
+  }
+}
+
+// Fungsi untuk menampilkan detail barcode (VERSI DIPERBAIKI)
+async function viewBarcodeDetail(barcodeId) {
+  try {
+    await loadBarcodeLibrary();
+
+    const barcode = barcodeData.find((b) => b.id_barcode === barcodeId);
+    if (!barcode) {
+      showToast("Barcode tidak ditemukan", "error");
+      return;
+    }
+
+    const asset = assets.find((a) => a.id === barcode.aset_terhubung);
+
+    const modal = document.getElementById("barcodeDetailModal");
+    const content = document.getElementById("barcodeDetailContent");
+
+    if (!modal || !content) return;
+
+    let assetInfoHtml = asset
+      ? `<p><strong>Nama Aset:</strong> ${asset.name}</p>
+         <p><strong>ID Aset:</strong> ${asset.id}</p>
+         <p><strong>Lokasi:</strong> ${asset.location}</p>`
+      : `<p style="color:red;">Aset terkait dengan barcode ini telah dihapus dari sistem.</p>`;
+
+    let actionButtonHtml =
+      barcode.status === "Aktif"
+        ? `<button class="btn btn-danger" onclick="deactivateBarcode('${barcode.id_barcode}')">Nonaktifkan</button>`
+        : `<button class="btn btn-success" onclick="reactivateBarcode('${barcode.id_barcode}')">Aktifkan Kembali</button>`;
+
+    content.innerHTML = `
+      <div class="barcode-detail">
+        <h4>Informasi Barcode</h4>
+        <p><strong>ID Barcode:</strong> ${barcode.id_barcode}</p>
+        <p><strong>Kode:</strong> ${barcode.isi_barcode}</p>
+        <p><strong>Tanggal Dibuat:</strong> ${formatDate(
+          barcode.tanggal_dibuat
+        )}</p>
+        <p><strong>Status:</strong> <span class="status-badge ${
+          barcode.status === "Aktif" ? "available" : "maintenance"
+        }">${barcode.status}</span></p>
+        <hr>
+        <h4>Aset Terhubung</h4>
+        ${assetInfoHtml}
+        <div style="text-align: center; margin: 1.5rem 0;">
+          <canvas id="barcodePreviewCanvas"></canvas>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary" onclick="closeModal('barcodeDetailModal')">Tutup</button>
+          <button class="btn btn-primary" onclick="printBarcode('${
+            barcode.isi_barcode
+          }')">Cetak</button>
+          ${actionButtonHtml}
+        </div>
+      </div>
+    `;
+
+    // Generate visual barcode (sekarang library sudah pasti tersedia)
+    JsBarcode("#barcodePreviewCanvas", barcode.isi_barcode, {
+      format: "CODE128",
+      displayValue: true,
+      fontSize: 18,
+      height: 100,
+    });
+
+    modal.classList.add("active");
+  } catch (error) {
+    console.error("Gagal memuat library barcode:", error);
+    showToast("Gagal memuat fitur barcode", "error");
+  }
+}
+
+// Fungsi untuk mengaktifkan kembali barcode
+function reactivateBarcode(barcodeId) {
+  const barcodeIndex = barcodeData.findIndex((b) => b.id_barcode === barcodeId);
+  if (barcodeIndex !== -1) {
+    barcodeData[barcodeIndex].status = "Aktif";
+    showToast("Barcode berhasil diaktifkan kembali");
+    closeModal("barcodeDetailModal");
+    return true;
+  }
+  return false;
+}
+
+// Fungsi untuk memuat tabel manajemen barcode
+function loadBarcodeTable() {
+  const tableBody = document.getElementById("barcodeTable");
+  if (!tableBody) return;
+
+  tableBody.innerHTML = "";
+
+  if (barcodeData.length === 0) {
+    tableBody.innerHTML = `<tr><td colspan="7" style="text-align: center;">Belum ada data barcode.</td></tr>`;
+    return;
+  }
+
+  barcodeData.forEach((barcode) => {
+    const asset = assets.find((a) => a.id === barcode.aset_terhubung);
+    const statusClass =
+      barcode.status === "Aktif" ? "available" : "maintenance";
+
+    const row = `
+      <tr>
+        <td><strong>${barcode.id_barcode}</strong></td>
+        <td>${barcode.isi_barcode}</td>
+        <td>${
+          asset ? asset.name : '<span style="color:red;">Aset Dihapus</span>'
+        }</td>
+        <td>${asset ? asset.id : "N/A"}</td>
+        <td>${formatDate(barcode.tanggal_dibuat)}</td>
+        <td><span class="status-badge ${statusClass}">${
+      barcode.status
+    }</span></td>
+        <td>
+          <div class="action-buttons">
+            <button class="btn btn-primary" onclick="viewBarcodeDetail('${
+              barcode.id_barcode
+            }')">Detail</button>
+            <button class="btn btn-secondary" onclick="printBarcode('${
+              barcode.isi_barcode
+            }')">Cetak</button>
+          </div>
+        </td>
+      </tr>
+    `;
+    tableBody.innerHTML += row;
+  });
+}
+
+// Fungsi untuk menampilkan halaman manajemen barcode
+function showBarcodeManagement() {
+  // Check permissions
+  const allowedPages = userPermissions[currentUserLevel] || [];
+  if (!allowedPages.includes("barcode")) {
+    showToast("Anda tidak memiliki akses ke halaman ini", "error");
+    return;
+  }
+
+  // Sembunyikan semua konten halaman
+  const pages = document.querySelectorAll(".page-content");
+  pages.forEach((page) => {
+    page.style.display = "none";
+  });
+
+  // Tampilkan halaman barcode management
+  const barcodeContent = document.getElementById("barcodeContent");
+  if (barcodeContent) {
+    barcodeContent.style.display = "block";
+
+    // Load data tabel
+    loadBarcodeTable();
+  }
+
+  // Update active nav link
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
+
+  // Update page title
+  const pageTitle = document.getElementById("pageTitle");
+  if (pageTitle) {
+    pageTitle.textContent = "Manajemen Barcode";
+  }
+}
+
+// Fungsi untuk mencetak barcode
+function printBarcode(barcode) {
+  const printWindow = window.open("", "_blank");
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Cetak Barcode - ${barcode}</title>
+        <style>
+          body { 
+            font-family: Arial, sans-serif; 
+            text-align: center;
+            padding: 20px;
+          }
+          .barcode-container {
+            margin: 20px 0;
+          }
+          .asset-info {
+            margin: 15px 0;
+            font-size: 14px;
+          }
+          @media print {
+            body { padding: 0; margin: 0; }
+            .no-print { display: none; }
+          }
+        </style>
+      </head>
+      <body>
+        <h2>Barcode Aset</h2>
+        <div class="barcode-container" id="printBarcode"></div>
+        <div class="asset-info">
+          <p><strong>Kode:</strong> ${barcode}</p>
+          <p><strong>Dicetak pada:</strong> ${new Date().toLocaleString(
+            "id-ID"
+          )}</p>
+        </div>
+        <button class="no-print" onclick="window.print()">Cetak</button>
+        <button class="no-print" onclick="window.close()">Tutup</button>
+        <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+        <script>
+          window.onload = function() {
+            JsBarcode("#printBarcode", "${barcode}", {
+              format: "CODE128",
+              displayValue: true,
+              fontSize: 16,
+              height: 80,
+              width: 2
+            });
+          };
+        </script>
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
 }
 
 function editAsset(id) {
@@ -5228,7 +6386,15 @@ function deleteAsset(id) {
     return;
   }
 
-  if (confirm("Apakah Anda yakin ingin menghapus aset ini?")) {
+  if (
+    confirm(
+      "Apakah Anda yakin ingin menghapus aset ini? Barcode terkait akan dinonaktifkan."
+    )
+  ) {
+    const barcode = findBarcodeByAssetId(id);
+    if (barcode) {
+      deactivateBarcode(barcode.id_barcode);
+    }
     assets = assets.filter((asset) => asset.id !== id);
     loadAssetsTable();
     updateStatistics();
@@ -5238,6 +6404,237 @@ function deleteAsset(id) {
   }
 }
 
+// Modifikasi fungsi saveAsset untuk menghasilkan barcode otomatis
+function generateBarcode(prefix = "AST") {
+  const timestamp = new Date().getTime().toString(36);
+  const randomStr = Math.random().toString(36).substr(2, 5).toUpperCase();
+  return `${prefix}-${timestamp}-${randomStr}`;
+}
+
+// Tambahkan fungsi untuk generate barcode dari modal aset
+function generateBarcodeFromAssetModal() {
+  const assetTypeField = document.getElementById("assetType");
+  const serialField = document.getElementById("assetSerial");
+
+  if (!assetTypeField.value) {
+    showToast("Pilih jenis aset terlebih dahulu", "error");
+    return;
+  }
+
+  const prefixMap = {
+    ELK: "ELK",
+    KOM: "KOM",
+    JAR: "JAR",
+    FUR: "FUR",
+    ATK: "ATK",
+    LAN: "LAN",
+  };
+
+  const prefix = prefixMap[assetTypeField.value] || "AST";
+  const barcode = generateBarcode(prefix);
+
+  // Isi field nomor seri jika kosong
+  if (!serialField.value) {
+    serialField.value = barcode;
+  }
+
+  showToast(`Barcode generated: ${barcode}`, "success");
+}
+
+// Fungsi untuk memuat library barcode
+function loadBarcodeLibrary() {
+  return new Promise((resolve, reject) => {
+    if (typeof JsBarcode !== "undefined") {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src =
+      "https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js";
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+}
+
+// Modifikasi fungsi openBarcodeModal untuk load library
+async function openBarcodeModal(barcode = null) {
+  try {
+    await loadBarcodeLibrary();
+    const modal = document.getElementById("barcodeModal");
+    if (modal) {
+      modal.classList.add("active");
+
+      if (barcode) {
+        displayBarcode(barcode);
+      } else {
+        setupBarcodeScanner();
+      }
+    }
+  } catch (error) {
+    console.error("Gagal memuat library barcode:", error);
+    showToast("Gagal memuat fitur barcode", "error");
+  }
+}
+
+// Fungsi untuk inisialisasi scanner barcode
+async function initBarcodeScanner() {
+  const scannerContainer = document.getElementById("scannerContainer");
+  if (!scannerContainer) return;
+
+  try {
+    // Cek apakah browser mendukung API media
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      throw new Error("Browser tidak mendukung akses kamera");
+    }
+
+    scannerContainer.innerHTML = `
+      <video id="barcodeScannerVideo" autoplay playsinline style="width: 100%; max-width: 300px; height: 200px; border-radius: 8px;"></video>
+      <div style="margin-top: 1rem;">
+        <button class="btn btn-secondary" onclick="stopBarcodeScanner()">Stop Kamera</button>
+      </div>
+    `;
+
+    const video = document.getElementById("barcodeScannerVideo");
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: {
+        facingMode: "environment", // Prioritaskan kamera belakang
+      },
+    });
+
+    video.srcObject = stream;
+
+    // Untuk deteksi barcode sebenarnya, Anda perlu library seperti QuaggaJS atau Dynamsoft
+    // Ini adalah implementasi sederhana untuk demonstrasi
+    simulateBarcodeDetection(video);
+  } catch (error) {
+    console.error("Error mengakses kamera:", error);
+    scannerContainer.innerHTML = `
+      <div style="color: var(--danger-color); text-align: center; padding: 2rem;">
+        <p>Tidak dapat mengakses kamera: ${error.message}</p>
+        <p>Silakan gunakan input manual di bawah</p>
+      </div>
+    `;
+  }
+}
+
+// Fungsi simulasi deteksi barcode (harus diganti dengan library nyata)
+function simulateBarcodeDetection(video) {
+  // Ini hanya simulasi - dalam implementasi nyata, gunakan library seperti:
+  // QuaggaJS, Dynamsoft Barcode Reader, atau ZXing
+  console.log("Scanner kamera aktif (simulasi)");
+
+  // Contoh: Deteksi barcode setelah 5 detik (simulasi)
+  setTimeout(() => {
+    // showToast("Fitur scanner kamera membutuhkan library tambahan", "info");
+  }, 5000);
+}
+
+// Fungsi untuk menghentikan scanner
+function stopBarcodeScanner() {
+  const video = document.getElementById("barcodeScannerVideo");
+  if (video && video.srcObject) {
+    const tracks = video.srcObject.getTracks();
+    tracks.forEach((track) => track.stop());
+    video.srcObject = null;
+  }
+  setupBarcodeScanner(); // Kembali ke menu awal
+}
+
+// Tambahkan fungsi untuk mengekspor barcode ke PDF
+async function exportBarcodesToPDF() {
+  try {
+    showLoading();
+    await loadBarcodeLibrary();
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    let y = 20;
+    const assetsPerPage = 6;
+    let currentPage = 1;
+
+    for (let i = 0; i < assets.length; i++) {
+      if (i > 0 && i % assetsPerPage === 0) {
+        doc.addPage();
+        y = 20;
+        currentPage++;
+      }
+
+      const asset = assets[i];
+
+      // Tambahkan judul
+      doc.setFontSize(12);
+      doc.text(asset.name, 20, y);
+
+      // Buat canvas untuk barcode
+      const canvas = document.createElement("canvas");
+      JsBarcode(canvas, asset.barcode, {
+        format: "CODE128",
+        displayValue: false,
+        height: 40,
+        width: 1.5,
+      });
+
+      // Tambahkan barcode ke PDF
+      const imgData = canvas.toDataURL("image/png");
+      doc.addImage(imgData, "PNG", 20, y + 5, 60, 30);
+
+      // Tambahkan teks barcode
+      doc.setFontSize(10);
+      doc.text(`ID: ${asset.id}`, 85, y + 10);
+      doc.text(`Barcode: ${asset.barcode}`, 85, y + 20);
+      doc.text(`Lokasi: ${asset.location}`, 85, y + 30);
+
+      y += 50;
+    }
+
+    doc.save("barcode-asset.pdf");
+    hideLoading();
+    showToast("Barcode berhasil diekspor ke PDF");
+  } catch (error) {
+    console.error("Error exporting barcodes:", error);
+    hideLoading();
+    showToast("Gagal mengekspor barcode", "error");
+  }
+}
+
+// Fungsi untuk menghasilkan ID barcode
+function generateBarcodeId() {
+  const count = barcodeData.length + 1;
+  return `BCD-${count.toString().padStart(3, "0")}`;
+}
+
+// Fungsi untuk membuat barcode data aset baru
+function createBarcodeData(assetId, barcodeContent) {
+  const newBarcode = {
+    id_barcode: generateBarcodeId(),
+    aset_terhubung: assetId,
+    isi_barcode: barcodeContent,
+    tanggal_dibuat: new Date().toISOString().split("T")[0],
+    status: "Aktif",
+  };
+
+  barcodeData.push(newBarcode);
+  return newBarcode;
+}
+
+// Fungsi untuk mencari barcode berdasarkan ID aset
+function findBarcodeByAssetId(assetId) {
+  return barcodeData.find((barcode) => barcode.aset_terhubung === assetId);
+}
+
+// Fungsi untuk mencari aset berdasarkan isi barcode
+function findAssetByBarcodeContent(barcodeContent) {
+  const barcode = barcodeData.find((b) => b.isi_barcode === barcodeContent);
+  if (barcode) {
+    return assets.find((asset) => asset.id === barcode.aset_terhubung);
+  }
+  return null;
+}
+
+// Modifikasi fungsi saveAsset untuk membuat barcode data
 function saveAsset(event) {
   event.preventDefault();
 
@@ -5302,15 +6699,14 @@ function saveAsset(event) {
       condition: document.getElementById("assetCondition")?.value || "",
       status: "Tersedia",
       image: assetImageUrl,
-      barcode:
-        (document.getElementById("assetSerial")?.value || "") +
-        Math.random().toString(36).substr(2, 3).toUpperCase(),
     };
 
     if (editingAssetId) {
       // Edit existing asset
       const assetIndex = assets.findIndex((a) => a.id === editingAssetId);
       if (assetIndex !== -1) {
+        // Simpan barcode yang sudah ada
+        assetData.barcode = assets[assetIndex].barcode;
         assets[assetIndex] = { ...assets[assetIndex], ...assetData };
         showToast("Aset berhasil diupdate!");
       }
@@ -5329,6 +6725,14 @@ function saveAsset(event) {
 
       assetData.id = generateAssetId(assetType);
       assetData.dateAdded = new Date().toISOString().split("T")[0];
+
+      // Generate barcode dan simpan ke entitas barcodeData
+      const barcodeContent = generateBarcode(assetType);
+      assetData.barcode = barcodeContent;
+
+      // Buat entitas barcode data
+      createBarcodeData(assetData.id, barcodeContent);
+
       assets.push(assetData);
       showToast("Aset berhasil ditambahkan!");
     }
@@ -5384,15 +6788,38 @@ function loadBorrowingTable() {
   });
 }
 
+// MODIFIED: loadAvailableAssets function with hierarchical sorting
 function loadAvailableAssets() {
   const select = document.getElementById("borrowAsset");
   if (!select) return;
 
   select.innerHTML = '<option value="">Pilih Aset</option>';
 
+  // Filter assets that are 'Tersedia'
   const availableAssets = assets.filter((asset) => asset.status === "Tersedia");
+
+  // Sort by typeName (primary) and then by name (secondary)
+  availableAssets.sort((a, b) => {
+    if (a.typeName < b.typeName) return -1;
+    if (a.typeName > b.typeName) return 1;
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
+  let currentTypeName = "";
   availableAssets.forEach((asset) => {
-    select.innerHTML += `<option value="${asset.name}" data-id="${asset.id}">${asset.name} (${asset.typeName})</option>`;
+    if (asset.typeName !== currentTypeName) {
+      const optgroup = document.createElement("optgroup");
+      optgroup.label = asset.typeName;
+      select.appendChild(optgroup);
+      currentTypeName = asset.typeName;
+    }
+    const option = document.createElement("option");
+    option.value = asset.name;
+    option.dataset.id = asset.id;
+    option.textContent = `${asset.name} (ID: ${asset.id})`;
+    select.lastChild.appendChild(option);
   });
 }
 
@@ -5444,7 +6871,7 @@ function saveBorrow(event) {
   borrowings.push(borrowData);
 
   // Update asset status
-  const asset = assets.find((a) => a.name === borrowData.asset);
+  const asset = assets.find((a) => a.id === borrowData.assetId); // Use assetId for more robust lookup
   if (asset) {
     asset.status = "Dipinjam";
   }
@@ -5453,6 +6880,7 @@ function saveBorrow(event) {
   loadBorrowingTable();
   updateStatistics();
   loadRecentAssets();
+  updateAssetChart(); // Update chart after asset status changes
 
   showToast("Peminjaman berhasil dicatat!");
 }
@@ -5465,7 +6893,7 @@ function returnAsset(borrowId) {
       borrow.actualReturnDate = new Date().toISOString().split("T")[0];
 
       // Update asset status
-      const asset = assets.find((a) => a.name === borrow.asset);
+      const asset = assets.find((a) => a.id === borrow.assetId); // Use assetId for more robust lookup
       if (asset) {
         asset.status = "Tersedia";
       }
@@ -5520,19 +6948,62 @@ function loadMaintenanceTable() {
         `;
     tableBody.innerHTML += row;
   });
+
+  // Pastikan event listener terpasang untuk elemen yang baru dibuat
+  attachMaintenanceDetailEvents();
 }
 
+function attachMaintenanceDetailEvents() {
+  // Menangani event delegation untuk tombol detail
+  const tableBody = document.getElementById("maintenanceTable");
+  if (tableBody) {
+    tableBody.addEventListener("click", function (e) {
+      if (
+        e.target.classList.contains("btn-secondary") &&
+        e.target.textContent === "Detail"
+      ) {
+        // Ambil ID dari atribut data atau elemen terdekat
+        const row = e.target.closest("tr");
+        const idCell = row.querySelector("td:first-child");
+        if (idCell) {
+          const id = idCell.textContent.trim();
+          viewMaintenanceDetail(id);
+        }
+      }
+    });
+  }
+}
+
+// Call this function to initialize the assets for maintenance
 function loadAssetsForMaintenance() {
   const select = document.getElementById("maintenanceAsset");
   if (!select) return;
-
   select.innerHTML = '<option value="">Pilih Aset</option>';
-
-  assets.forEach((asset) => {
-    select.innerHTML += `<option value="${asset.name}" data-id="${asset.id}">${asset.name} (${asset.typeName})</option>`;
+  // Get all assets
+  const allAssets = [...assets];
+  // Sort by typeName (primary) and then by name (secondary)
+  allAssets.sort((a, b) => {
+    if (a.typeName < b.typeName) return -1;
+    if (a.typeName > b.typeName) return 1;
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+  let currentTypeName = "";
+  allAssets.forEach((asset) => {
+    if (asset.typeName !== currentTypeName) {
+      const optgroup = document.createElement("optgroup");
+      optgroup.label = asset.typeName;
+      select.appendChild(optgroup);
+      currentTypeName = asset.typeName;
+    }
+    const option = document.createElement("option");
+    option.value = asset.name;
+    option.dataset.id = asset.id;
+    option.textContent = `${asset.name} (ID: ${asset.id})`;
+    select.lastChild.appendChild(option);
   });
 }
-
 function openMaintenanceModal() {
   if (currentUserLevel !== "Admin" && currentUserLevel !== "Sarpras") {
     showToast("Anda tidak memiliki izin untuk mencatat pemeliharaan", "error");
@@ -5590,17 +7061,75 @@ function saveMaintenance(event) {
 
 function viewMaintenanceDetail(id) {
   const maintenance = maintenanceRecords.find((m) => m.id === id);
-  if (maintenance) {
-    alert(`Detail Pemeliharaan:
-        
-ID: ${maintenance.id}
-Aset: ${maintenance.assetName}
-Jenis: ${maintenance.type}
-Tanggal: ${formatDate(maintenance.date)}
-Biaya: ${formatCurrency(maintenance.cost)}
-Teknisi: ${maintenance.technician}
-Deskripsi: ${maintenance.description}`);
+  if (!maintenance) return;
+
+  const modal = document.getElementById("maintenanceDetailModal");
+  const content = document.getElementById("maintenanceDetailContent");
+
+  if (!modal || !content) return;
+
+  content.innerHTML = `
+        <div class="maintenance-detail">
+            <h4>Detail Pemeliharaan</h4>
+            <p><strong>ID:</strong> ${maintenance.id}</p>
+            <p><strong>Aset:</strong> ${maintenance.assetName}</p>
+            <p><strong>Jenis Pemeliharaan:</strong> ${maintenance.type}</p>
+            <p><strong>Tanggal:</strong> ${formatDate(maintenance.date)}</p>
+            <p><strong>Biaya:</strong> ${formatCurrency(maintenance.cost)}</p>
+            <p><strong>Deskripsi:</strong> ${maintenance.description}</p>
+            <p><strong>Status:</strong> <span class="status-badge ${
+              maintenance.status === "Selesai" ? "available" : "maintenance"
+            }">${maintenance.status}</span></p>
+            <p><strong>Teknisi:</strong> ${maintenance.technician}</p>
+            <div class="btn-group" style="margin-top: 1rem;">
+                <button class="btn btn-primary" onclick="closeModal('maintenanceDetailModal')">Tutup</button>
+            </div>
+        </div>
+    `;
+
+  modal.classList.add("active");
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove("active");
   }
+}
+
+// Call this function to initialize the available assets for borrowing
+function loadAvailableAssets() {
+  const select = document.getElementById("borrowAsset");
+  if (!select) return;
+
+  select.innerHTML = '<option value="">Pilih Aset</option>';
+
+  // Filter assets that are 'Tersedia'
+  const availableAssets = assets.filter((asset) => asset.status === "Tersedia");
+
+  // Sort by typeName (primary) and then by name (secondary)
+  availableAssets.sort((a, b) => {
+    if (a.typeName < b.typeName) return -1;
+    if (a.typeName > b.typeName) return 1;
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+
+  let currentTypeName = "";
+  availableAssets.forEach((asset) => {
+    if (asset.typeName !== currentTypeName) {
+      const optgroup = document.createElement("optgroup");
+      optgroup.label = asset.typeName;
+      select.appendChild(optgroup);
+      currentTypeName = asset.typeName;
+    }
+    const option = document.createElement("option");
+    option.value = asset.name;
+    option.dataset.id = asset.id;
+    option.textContent = `${asset.name} (ID: ${asset.id})`;
+    select.lastChild.appendChild(option);
+  });
 }
 
 // User Management Functions
@@ -7216,6 +8745,51 @@ function updateFooterMargin() {
   }
 }
 
+// Fungsi untuk menghasilkan ID barcode yang unik
+function generateBarcodeId() {
+  const count = barcodeData.length + 1;
+  return `BCD-${count.toString().padStart(3, "0")}`;
+}
+
+// Fungsi untuk membuat entri data barcode baru saat aset dibuat
+function createBarcodeData(assetId, barcodeContent) {
+  const newBarcode = {
+    id_barcode: generateBarcodeId(),
+    aset_terhubung: assetId,
+    isi_barcode: barcodeContent,
+    tanggal_dibuat: new Date().toISOString().split("T")[0],
+    status: "Aktif",
+  };
+  barcodeData.push(newBarcode);
+  return newBarcode;
+}
+
+// Fungsi untuk menonaktifkan barcode
+function deactivateBarcode(barcodeId) {
+  const barcodeIndex = barcodeData.findIndex((b) => b.id_barcode === barcodeId);
+  if (barcodeIndex !== -1) {
+    barcodeData[barcodeIndex].status = "Nonaktif";
+    showToast("Barcode berhasil dinonaktifkan!");
+    closeModal("barcodeDetailModal");
+    loadBarcodeTable();
+    return true;
+  }
+  return false;
+}
+
+// Fungsi untuk mengaktifkan kembali barcode
+function reactivateBarcode(barcodeId) {
+  const barcodeIndex = barcodeData.findIndex((b) => b.id_barcode === barcodeId);
+  if (barcodeIndex !== -1) {
+    barcodeData[barcodeIndex].status = "Aktif";
+    showToast("Barcode berhasil diaktifkan kembali!");
+    closeModal("barcodeDetailModal");
+    loadBarcodeTable();
+    return true;
+  }
+  return false;
+}
+
 // Event Listeners
 document.addEventListener("DOMContentLoaded", function () {
   // Add CSS animation for spin loading
@@ -7251,6 +8825,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch((error) => {
         console.error("Failed to load Chart.js:", error);
       });
+  }
+
+  // Pastikan loadMaintenanceTable dipanggil dengan benar
+  if (
+    window.location.hash === "#maintenance" ||
+    document.getElementById("maintenanceContent").style.display === "block"
+  ) {
+    loadMaintenanceTable();
   }
 
   // Inisialisasi chart dan DataTables setelah login berhasil
@@ -7330,8 +8912,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Initialize sticky header
+  initHeaderScroll();
+
+  // Initialize sticky header behavior
+  initStickyHeader();
+
   // Initialize sidebar
   initializeSidebar();
+
   // Initialize search functionality
   addSearchHighlightStyle();
   setupSearchFunctionality();

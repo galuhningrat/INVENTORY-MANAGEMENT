@@ -155,17 +155,18 @@ body {
   display: inline-block;
 }
 
-/* Login Page Styles - UPDATED */
 .login-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--primary-dark)
-  );
+      rgba(255, 255, 255, 0.7),
+      /* Warna overlay */ rgba(0, 0, 0, 0.7)
+    ),
+    url("assets/bg-logo-002.jpg"); /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Mengatur gambar agar menutupi seluruh area */
+  background-position: center; /* Mengatur posisi gambar di tengah */
   padding: 1rem; /* Adjusted padding for smaller screens */
 }
 
@@ -462,7 +463,7 @@ body {
   pointer-events: auto;
 }
 
-/* Main content adjustments */
+/* Main content adjustmentsa */
 .main-content {
   margin-left: var(--sidebar-width);
   transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -485,8 +486,71 @@ body {
   height: var(--header-height);
   position: sticky;
   top: 0;
-  z-index: 999;
-  transition: background 0.3s ease, box-shadow 0.3s ease; /* Added transitions */
+  z-index: 1000;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+
+  /* Existing styles */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.4s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Sedikit shadow ketika header di-scroll */
+.navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek semi-transparan ketika di-scroll (opsional) */
+.navbar.scrolled {
+  background: rgba(var(--card-bg-rgb), 0.95);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+.content-area.header-hidden {
+  margin-top: -60px; /* Sesuaikan dengan tinggi header */
+}
+
+/* Tombol Dark Mode yang lebih aesthetic */
+.navbar-nav .btn-secondary {
+  background: none; /* Hapus background default */
+  border: 1px solid var(--border-color); /* Tambahkan border */
+  color: var(--text-primary); /* Warna teks sesuai tema */
+  padding: 0.5rem 0.75rem; /* Sesuaikan padding */
+  border-radius: 50%; /* Bentuk bulat */
+  width: 40px; /* Ukuran tetap */
+  height: 40px; /* Ukuran tetap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Ukuran ikon */
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-secondary:hover {
+  background-color: var(--light-bg); /* Efek hover */
+  border-color: var(--primary-color); /* Warna border saat hover */
+  color: var(--primary-color); /* Warna ikon saat hover */
+  transform: rotate(15deg); /* Sedikit rotasi untuk estetika */
+}
+
+.dark-mode .navbar-nav .btn-secondary {
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark-mode .navbar-nav .btn-secondary:hover {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .navbar-left {
@@ -611,9 +675,11 @@ body {
 /* Content area */
 .content-area {
   padding: 2rem;
+  padding-top: 10px; /* Beri sedikit ruang atas */
   overflow-x: auto;
   overflow-y: visible;
   flex-grow: 1; /* Makes content area fill available space */
+  transition: margin-top 0.3s ease-in-out;
 }
 
 /* [TAMBAHKAN DI BAGIAN CSS] */
@@ -1190,18 +1256,34 @@ body {
   text-align: right;
 }
 
-/* Enhanced Footer Styles */
+/* Style DASAR untuk footer (tanpa efek sidebar) */
 .footer {
   background: var(--card-bg);
   border-top: 1px solid var(--border-color);
   margin-top: auto;
-  margin-left: var(--sidebar-width);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem; /* Padding normal */
 }
 
-.main-content.sidebar-collapsed ~ .footer {
-  margin-left: var(--sidebar-collapsed-width);
+/* Style KHUSUS untuk footer di halaman DASHBOARD */
+.footer--dashboard {
+  margin-left: var(--sidebar-width);
+  padding-left: var(--sidebar-width);
+  margin-left: calc(-1 * var(--sidebar-width));
+  width: 100vw;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.main-content.sidebar-collapsed ~ .footer--dashboard {
+  margin-left: calc(-1 * var(--sidebar-collapsed-width));
+  padding-left: var(--sidebar-collapsed-width);
+}
+
+/* Style KHUSUS untuk footer di halaman LOGIN (atau halaman tanpa sidebar) */
+.footer--login {
+  /* Reset semua properti yang mengganggu dari style dashboard */
+  margin-left: 0 !important;
+  padding-left: 2rem !important; /* Gunakan padding normal seperti .footer base */
+  width: 100% !important;
 }
 
 .footer-content {
@@ -1514,6 +1596,14 @@ body {
 
   .footer {
     margin-left: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .footer--dashboard {
+    margin-left: 0;
+    padding-left: 2rem; /* Kembali ke padding normal di mobile */
+    width: 100%;
   }
 
   .footer-content {

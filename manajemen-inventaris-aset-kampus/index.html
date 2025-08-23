@@ -1,12 +1,14 @@
+<!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sistem Inventaris Kampus - Sekolah Tinggi Teknologi Indonesia</title>
+    <title>
+      Sistem Inventaris Kampus - Sekolah Tinggi Teknologi Indonesia Cirebon
+    </title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Login Page -->
     <div id="loginPage" class="login-container">
       <div class="login-card animate-slide-down">
         <div class="logo">
@@ -14,7 +16,7 @@
             <img src="assets/logo-stti.png" alt="Logo STTC" class="logo-img" />
           </div>
           <h1>Sistem Inventaris</h1>
-          <p>Sekolah Tinggi Teknologi Indonesia</p>
+          <p>Sekolah Tinggi Teknologi Indonesia Cirebon</p>
         </div>
         <form id="loginForm">
           <div class="form-group">
@@ -42,9 +44,7 @@
       </div>
     </div>
 
-    <!-- Dashboard -->
     <div id="dashboard" class="dashboard">
-      <!-- Sidebar -->
       <aside id="sidebar" class="sidebar">
         <div class="sidebar-header">
           <div class="logo">
@@ -161,12 +161,22 @@
             </svg>
             <span>Laporan</span>
           </a>
+
+          <a href="#" class="nav-link" data-page="barcode">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 2v20M2 12h20M4 4l16 16M4 20l16-16" />
+            </svg>
+            <span>Manajemen Barcode</span>
+          </a>
         </nav>
       </aside>
 
-      <!-- Main Content -->
       <main class="main-content" id="mainContent">
-        <!-- Navbar -->
         <nav class="navbar">
           <div class="navbar-left">
             <button class="menu-toggle" id="menuToggle">
@@ -188,7 +198,6 @@
             <span class="navbar-brand" id="pageTitle">Dashboard</span>
           </div>
           <div class="navbar-nav">
-            <!-- Tombol Dark Mode -->
             <button class="btn btn-secondary" onclick="toggleDarkMode()">
               <span id="darkModeToggleIcon">🌙</span>
             </button>
@@ -208,9 +217,7 @@
           </div>
         </nav>
 
-        <!-- Content Area -->
         <div class="content-area">
-          <!-- Dashboard Content -->
           <div id="dashboardContent" class="page-content">
             <div class="stats-grid">
               <div class="stat-card">
@@ -259,7 +266,6 @@
               </div>
             </div>
 
-            <!-- Chart Section -->
             <div class="chart-container">
               <canvas id="assetChart"></canvas>
             </div>
@@ -279,17 +285,13 @@
                     <th>Tanggal Masuk</th>
                   </tr>
                 </thead>
-                <tbody id="recentAssetsTable">
-                  <!-- Data will be populated by JavaScript -->
-                </tbody>
+                <tbody id="recentAssetsTable"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Assets Content -->
           <div id="assetsContent" class="page-content" style="display: none">
             <div class="data-table-container">
-              <!-- Di dalam halaman Manajemen Aset -->
               <div class="table-header">
                 <h3 class="table-title">Manajemen Aset</h3>
                 <div class="search-box">
@@ -312,7 +314,6 @@
                   + Tambah Aset
                 </button>
               </div>
-              <!-- Pastikan tabel dibungkus dengan .table-wrapper -->
               <div class="table-wrapper">
                 <table class="data-table">
                   <thead>
@@ -328,15 +329,12 @@
                       <th>Aksi</th>
                     </tr>
                   </thead>
-                  <tbody id="assetsTable">
-                    <!-- Data will be populated by JavaScript -->
-                  </tbody>
+                  <tbody id="assetsTable"></tbody>
                 </table>
               </div>
             </div>
           </div>
 
-          <!-- Borrowing Content -->
           <div id="borrowingContent" class="page-content" style="display: none">
             <div class="data-table-container">
               <div class="table-header">
@@ -357,14 +355,11 @@
                     <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody id="borrowingTable">
-                  <!-- Data will be populated by JavaScript -->
-                </tbody>
+                <tbody id="borrowingTable"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Maintenance Content -->
           <div
             id="maintenanceContent"
             class="page-content"
@@ -392,14 +387,11 @@
                     <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody id="maintenanceTable">
-                  <!-- Data will be populated by JavaScript -->
-                </tbody>
+                <tbody id="maintenanceTable"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Users Content -->
           <div id="usersContent" class="page-content" style="display: none">
             <div class="data-table-container">
               <div class="table-header">
@@ -420,14 +412,11 @@
                     <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody id="usersTable">
-                  <!-- Data will be populated by JavaScript -->
-                </tbody>
+                <tbody id="usersTable"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Requests Content -->
           <div id="requestsContent" class="page-content" style="display: none">
             <div class="data-table-container">
               <div class="table-header">
@@ -448,14 +437,11 @@
                     <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody id="requestsTable">
-                  <!-- Data will be populated by JavaScript -->
-                </tbody>
+                <tbody id="requestsTable"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- Reports Content -->
           <div id="reportsContent" class="page-content" style="display: none">
             <div class="data-table-container">
               <div class="table-header">
@@ -485,6 +471,9 @@
                   >
                     💰 Laporan Keuangan
                   </button>
+                  <button class="btn btn-info" onclick="exportBarcodesToPDF()">
+                    🖨️ Ekspor Barcode
+                  </button>
                 </div>
               </div>
               <div class="report-preview" id="reportPreview">
@@ -492,11 +481,62 @@
               </div>
             </div>
           </div>
+
+          <div id="barcodeContent" class="page-content" style="display: none">
+            <div class="data-table-container">
+              <div class="table-header">
+                <h3 class="table-title">Manajemen Barcode</h3>
+                <div class="search-box">
+                  <input
+                    type="text"
+                    class="search-input"
+                    id="barcodeSearch"
+                    placeholder="Cari barcode..."
+                  />
+                </div>
+                <button class="btn btn-primary" onclick="exportBarcodesToPDF()">
+                  📄 Ekspor Semua Barcode (PDF)
+                </button>
+              </div>
+              <div class="table-wrapper">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>ID Barcode</th>
+                      <th>Kode Barcode</th>
+                      <th>Nama Aset Terhubung</th>
+                      <th>ID Aset</th>
+                      <th>Tanggal Dibuat</th>
+                      <th>Status</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="barcodeTable"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id="barcodeDetailModal" class="modal">
+            <div class="modal-content" style="max-width: 600px">
+              <div class="modal-header">
+                <h3 class="modal-title">Detail Barcode</h3>
+                <button
+                  class="close-modal"
+                  onclick="closeModal('barcodeDetailModal')"
+                >
+                  &times;
+                </button>
+              </div>
+              <div class="modal-body">
+                <div id="barcodeDetailContent"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>
 
-    <!-- Asset Modal -->
     <div id="assetModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -544,13 +584,23 @@
                 <div class="error-message" id="assetBrandError"></div>
               </div>
               <div class="form-group">
-                <label for="assetSerial">Nomor Seri</label>
-                <input
-                  type="text"
-                  id="assetSerial"
-                  class="form-control"
-                  required
-                />
+                <label for="assetSerial">Nomor Seri/Barcode</label>
+                <div style="display: flex; gap: 0.5rem">
+                  <input
+                    type="text"
+                    id="assetSerial"
+                    class="form-control"
+                    required
+                  />
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    onclick="generateBarcodeFromAssetModal()"
+                    style="white-space: nowrap"
+                  >
+                    Generate
+                  </button>
+                </div>
                 <div class="error-message" id="assetSerialError"></div>
               </div>
             </div>
@@ -628,7 +678,6 @@
       </div>
     </div>
 
-    <!-- Maintenance Modal -->
     <div id="maintenanceModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -707,7 +756,6 @@
       </div>
     </div>
 
-    <!-- Borrow Modal -->
     <div id="borrowModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -795,7 +843,6 @@
       </div>
     </div>
 
-    <!-- User Modal -->
     <div id="userModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -879,7 +926,6 @@
       </div>
     </div>
 
-    <!-- Request Modal -->
     <div id="requestModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -978,7 +1024,6 @@
       </div>
     </div>
 
-    <!-- Asset Detail Modal -->
     <div id="assetDetailModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -988,49 +1033,24 @@
           </button>
         </div>
         <div class="modal-body">
-          <div id="assetDetailContent">
-            <!-- Content will be populated by JavaScript -->
-          </div>
+          <div id="assetDetailContent"></div>
         </div>
       </div>
     </div>
 
-    <!-- Barcode Scanner Modal -->
-    <div id="barcodeModal" class="modal">
+    <div id="maintenanceDetailModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <h3 class="modal-title">Scan Barcode</h3>
-          <button class="close-modal" onclick="closeModal('barcodeModal')">
+          <h3 class="modal-title">Detail Pemeliharaan</h3>
+          <button
+            class="close-btn"
+            onclick="closeModal('maintenanceDetailModal')"
+          >
             &times;
           </button>
         </div>
         <div class="modal-body">
-          <div style="text-align: center; padding: 2rem">
-            <div
-              style="
-                width: 200px;
-                height: 200px;
-                border: 2px dashed var(--border-color);
-                margin: 0 auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 8px;
-              "
-            >
-              <span style="color: var(--text-secondary)">📷 Camera View</span>
-            </div>
-            <p style="margin-top: 1rem; color: var(--text-secondary)">
-              Fitur barcode scanner akan segera tersedia
-            </p>
-            <button
-              class="btn btn-primary"
-              onclick="closeModal('barcodeModal')"
-              style="margin-top: 1rem"
-            >
-              Tutup
-            </button>
-          </div>
+          <div id="maintenanceDetailContent"></div>
         </div>
       </div>
     </div>
@@ -1046,7 +1066,7 @@
             />
             <div class="footer-logo-text">
               <h3>SISTEM INVENTARIS</h3>
-              <p>Sekolah Tinggi Teknologi Indonesia</p>
+              <p>Sekolah Tinggi Teknologi Indonesia Cirebon</p>
             </div>
           </div>
           <p class="footer-description">
@@ -1121,7 +1141,7 @@
       <div class="footer-bottom">
         <div class="footer-bottom-content">
           <div class="copyright">
-            © 2025 STTI - Sekolah Tinggi Teknologi Indonesia. All rights
+            © 2025 STTI - Sekolah Tinggi Teknologi Indonesia Cirebon. All rights
             reserved.
           </div>
           <div class="footer-meta">
@@ -1135,7 +1155,6 @@
       </div>
     </footer>
 
-    <!-- Loading Overlay -->
     <div id="loadingOverlay" class="loading-overlay">
       <div class="loading-content">
         <div class="loading-spinner"></div>
@@ -1143,7 +1162,6 @@
       </div>
     </div>
 
-    <!-- Overlay (Area Gelap) -->
     <div class="overlay" id="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -1153,5 +1171,61 @@
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
     <script src="script.js"></script>
+
+    <div id="barcodeModal" class="modal">
+      <div class="modal-content" style="max-width: 500px">
+        <div class="modal-header">
+          <h3 class="modal-title">Manajemen Barcode</h3>
+          <button class="close-modal" onclick="closeModal('barcodeModal')">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="barcodeContainer">
+            <div style="text-align: center; padding: 2rem">
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  gap: 1rem;
+                  margin-bottom: 1rem;
+                "
+              >
+                <button class="btn btn-primary" onclick="setupBarcodeScanner()">
+                  📷 Scan Barcode
+                </button>
+                <button
+                  class="btn btn-secondary"
+                  onclick="openBarcodeGenerator()"
+                >
+                  🖨️ Generate Barcode
+                </button>
+              </div>
+              <p style="color: var(--text-secondary); margin-top: 1rem">
+                Pilih tindakan yang ingin dilakukan: scan barcode atau generate
+                barcode baru
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="barcodeDetailModal" class="modal">
+      <div class="modal-content" style="max-width: 600px">
+        <div class="modal-header">
+          <h3 class="modal-title">Detail Barcode</h3>
+          <button
+            class="close-modal"
+            onclick="closeModal('barcodeDetailModal')"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="barcodeDetailContent"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
